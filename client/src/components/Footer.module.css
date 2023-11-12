@@ -1,0 +1,19 @@
+  
+  .footer {
+    background-color: #1e1e1e;
+    height: 69px;
+    position: relative;
+    width: 100%
+  }
+  
+.textWrapper {
+    color: #ffffffde;
+    font-family: "Sansation-Bold", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    /* height: 69px; */
+    left: 513px;
+    position: absolute;
+    text-align: center;
+  }
+  
