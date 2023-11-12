@@ -7,6 +7,8 @@ const Register = () => {
         <div className={styles.cheekyText}>Hi stranger :)</div>
 
         <form method="POST">
+            <input className={styles.inputField} type="text" name="name" id="register-name" placeholder="name" />
+            <input className={styles.inputField} type="text" name="img" id="register-img" placeholder="imgUrl" />
             <input className={styles.inputField} type="text" name="email" id="register-email" placeholder="email" />
             <input className={styles.inputField} type="password" name="password" id="register-password" placeholder="password" />
             <input className={styles.inputField} type="password" name="repeatPassword" id="repeat-password" placeholder="repeat password" />
