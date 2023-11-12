@@ -1,4 +1,3 @@
-
 .navbarWrapper {
     background-color: transparent;
     width: 100%;
@@ -7,6 +6,9 @@
   }
   
 .navbar {
+    color: #f4efd2;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     color: #ffffffde;
     background-color: #0c394e;
     height: 90px;

@@ -9,8 +9,8 @@
 
 .cheekyText {
   color: #fdb326;
-  font-family: "Sansation-Bold", Helvetica;
-  font-size: 60px;
+  color: #f4efd2;font-family: 'Poppins', sans-serif;
+  font-size: 55px;
   font-weight: 700;
   left: 80px;
   letter-spacing: 0;
@@ -22,8 +22,7 @@
 }
 
 .p {
-  color: #f4efd2;
-  font-family: "Sansation-Regular", Helvetica;
+  color: #f4efd2;font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
   right: 80px;

@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
       <Header />
-      <FourOFour />
-      {/* <Index /> */}
+      {/* <FourOFour /> */}
+      <Index />
       <Footer />
     </div>
   )
