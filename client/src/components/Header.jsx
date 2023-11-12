@@ -5,14 +5,13 @@ const Header = () => {
     return (
           <header className={styles.navbarWrapper}>
             <div className={styles.navbar}>
-              <a className="">Login</a>
-              <a hreg="#" className="">Catalog</a>
-              <a hreg="#" className="">Users</a>
-              <a hreg="#" className="">Birichka</a>
-              <a hreg="#" className="">Add beer</a>
-              <a hreg="#" className="">Home</a>
-              <a hreg="#" className="">Logout</a>
-              <a hreg="#" className="">Register</a>
+              <a href="#" className={styles.navBtn}>Home</a>
+              <a href="#" className={styles.navBtn}>Users</a>
+              <a href="#" className={styles.navBtn}>Add beer</a>
+              <a href="#" className={styles.navBtn}>Catalog</a>
+              <a href="#" className={styles.navBtn}>Register</a>
+              <a href="#" className={styles.navBtn}>Login</a>
+              <a href="#" className={styles.navBtn}>Logout</a>
             </div>
           </header>
     );

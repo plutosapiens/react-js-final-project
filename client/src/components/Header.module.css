@@ -4,22 +4,23 @@
     display: flex;
     justify-content: space-between;
   }
+ 
   
 .navbar {
-    color: #f4efd2;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #ffffffde;
     background-color: #0c394e;
     height: 90px;
-    /* position: relative; */
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 2%;
-    padding-left: 10%;  /* Adjust as needed */
+    padding-left: 10%;
     padding-right: 10%;
-  }
-  
+}
 
-  
+.navBtn {
+    text-decoration: none;
+    color: #ffffffde;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+
+}
