@@ -1,0 +1,45 @@
+.main {
+  background-color: #0c394e;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 934px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cheekyText {
+  color: #fdb326;
+  font-family: "Sansation-Bold", Helvetica;
+  font-size: 60px;
+  font-weight: 700;
+  left: 80px;
+  letter-spacing: 0;
+  line-height: normal;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  width: 535px;
+}
+
+.p {
+  color: #f4efd2;
+  font-family: "Sansation-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  right: 80px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  width: 414px;
+}
+
+.rectangle {
+  height: 455px;
+  justify-content: center;
+  object-fit: cover;
+  position: absolute;
+  top: 186px;
+  width: 1307px;
+}

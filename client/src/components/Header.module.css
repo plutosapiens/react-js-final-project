@@ -1,0 +1,22 @@
+
+.navbarWrapper {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.navbar {
+    background-color: #0c394e;
+    height: 90px;
+    /* position: relative; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    padding-left: 10%;  /* Adjust as needed */
+    padding-right: 10%;
+  }
+  
+
+  
