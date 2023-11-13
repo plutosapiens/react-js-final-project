@@ -6,13 +6,14 @@ import Register from "./components/Register"
 import Login from "./components/Login"
 import AddNew from "./components/AddNew"
 import Edit from "./components/Edit"
+import Catalog from "./components/Catalog"
 
 
 function App() {
   return (
     <div>
       <Header />
-      <Edit />
+      <Catalog />
       {/* <Index /> */}
       <Footer />
     </div>

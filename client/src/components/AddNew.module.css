@@ -13,11 +13,10 @@
     font-size: 55px;
     font-weight: 700;
     left: 480px;
-    letter-spacing: 0;
     line-height: normal;
     opacity: 0.9;
     position: absolute;
-    top: 0;
+    top: 10px;
     width: 535px;
   }
 

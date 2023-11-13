@@ -2,17 +2,18 @@
     background-color: #1e1e1e;
     height: 69px;
     position: relative;
+    bottom: 0;
     width: 100%
   }
   
 .textWrapper {
-    color: #ffffffde;
-    color: #f4efd2;font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    /* height: 69px; */
-    left: 513px;
-    position: absolute;
-    text-align: center;
+  color: #ffffffde;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  bottom: 0; /* Align the text at the bottom of the container */
+  width: 100%; /* Make the text wrapper take full width */
   }
   
