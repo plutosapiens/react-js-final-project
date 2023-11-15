@@ -7,14 +7,16 @@ import Login from "./components/Login"
 import AddNew from "./components/AddNew"
 import Edit from "./components/Edit"
 import Catalog from "./components/Catalog"
+import Users from "./components/USers"
+
 
 
 function App() {
   return (
     <div>
       <Header />
-      <Catalog />
-      {/* <Index /> */}
+      <Users />
+      {/* <Catalog /> */}
       <Footer />
     </div>
   )
