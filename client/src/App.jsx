@@ -13,12 +13,11 @@ import Users from "./components/USers"
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-      <Users />
-      {/* <Catalog /> */}
+      <Register />
       <Footer />
-    </div>
+    </>
   )
 }
 
