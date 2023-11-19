@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      <Register />
+      <Users />
       <Footer />
     </>
   )

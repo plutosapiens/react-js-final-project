@@ -1,2 +1,23 @@
-
-{}
+{
+  "07f260f4-466c-4607-9a33-f7273b24f1b4": {
+    "_id": "07f260f4-466c-4607-9a33-f7273b24f1b4",
+    "name": "Asen",
+    "password": "123",
+    "imageUrl": "https://pbs.twimg.com/profile_images/1381335577656709121/z3Jb8uCx_400x400.jpg",
+    "description": "He protec he attck! He always come back."
+  },
+  "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
+    "_id": "bdabf5e9-23be-40a1-9f14-9117b6702a9d",
+    "name": "Another",
+    "password": "456",
+    "imageUrl": "https://www.looper.com/img/gallery/legolas-entire-backstory-explained/intro-1596043157.jpg",
+    "description": "He protec he attck! He's a snack."
+  },
+  "7b3143e1-d6df-4e67-bd7e-5f8b03f2fd3f": {
+    "_id": "7b3143e1-d6df-4e67-bd7e-5f8b03f2fd3f",
+    "name": "John",
+    "password": "789",
+    "imageUrl": "https://static.wikia.nocookie.net/the-hobbit-lotr-trilogies/images/9/96/SamLOTR.jpg/revision/latest?cb=20170822191409",
+    "description": "He got your back!"
+  }
+}

@@ -1,42 +1,32 @@
-import React from "react";
-import styles from "./Users.module.css"
+import { useEffect, useState } from "react";
+import styles from "./Users.module.css";
+import UserItem from "./UserItem";
+
+import * as userService from "../services/userService";
 
 const Users = () => {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        userService.getAll()
+        .then(result => setUsers(result));
+    }, []);
+
      return (
         <div className={styles.main}>
         <div className={styles.cheekyText}>Your friends</div>
         
         <div className={styles.users}>
-            <div className={styles.item}>
-                <img className={styles.rectangle} alt="Image" src="img/friend.jpg" />
-                <p className={styles.itemName}>User name</p>
-                <p className={styles.itemName}>User description. He protec he attck! He always come back.</p>
-            </div>
-            <div className={styles.item}>
-                <img className={styles.rectangle} alt="Image" src="img/friend.jpg" />
-                <p className={styles.itemName}>User name</p>
-                <p className={styles.itemName}>User description. He protec he attck! He always come back.</p>
-            </div>
-            <div className={styles.item}>
-                <img className={styles.rectangle} alt="Image" src="img/friend.jpg" />
-                <p className={styles.itemName}>User name</p>
-                <p className={styles.itemName}>User description. He protec he attck! He always come back.</p>
-            </div>
-            <div className={styles.item}>
-                <img className={styles.rectangle} alt="Image" src="img/friend.jpg" />
-                <p className={styles.itemName}>User name</p>
-                <p className={styles.itemName}>User description. He protec he attck! He always come back.</p>
-            </div>
-            <div className={styles.item}>
-                <img className={styles.rectangle} alt="Image" src="img/friend.jpg" />
-                <p className={styles.itemName}>User name</p>
-                <p className={styles.itemName}>User description. He protec he attck! He always come back.</p>
-            </div>
-            <div className={styles.item}>
-                <img className={styles.rectangle} alt="Image" src="img/friend.jpg" />
-                <p className={styles.itemName}>User name</p>
-                <p className={styles.itemName}>User description. He protec he attck! He always come back.</p>
-            </div>
+           {users.map(user => (
+               <UserItem 
+                key={user._id}
+                userId={user._id}
+                name={user.name}
+                imageUrl={user.imageUrl}
+                description={user.description}
+               />
+           ))}
+           
         </div>
         </div>
         
