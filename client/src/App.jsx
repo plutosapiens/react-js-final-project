@@ -9,12 +9,16 @@ import Edit from "./components/Edit"
 import Catalog from "./components/Catalog"
 import Users from "./components/USers"
 
+import firebase from './utils/firebase'; // Import the Firebase configuration file
+
 
 
 function App() {
   return (
     <>
       <Header />
+      <Catalog />
+      <AddNew />
       <Users />
       <Footer />
     </>
