@@ -26,7 +26,6 @@ const Users = () => {
                 description={user.description}
                />
            ))}
-           
         </div>
         </div>
         
