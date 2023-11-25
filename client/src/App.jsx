@@ -17,7 +17,6 @@ function App() {
 
       <>
       <Header />
-<BrowserRouter>
 
       <Routes>
         <Route path="/" element={<Index />} />
@@ -29,7 +28,6 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path="*" element={<FourOFour />} /> {/* Catch-all route for 404 */}
       </Routes>
-</BrowserRouter>
 
       <Footer />
       </>
