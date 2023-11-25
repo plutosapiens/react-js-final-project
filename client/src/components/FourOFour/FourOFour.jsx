@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import styles from "./FourOFour.module.css"
 
 const FourOFour = () => {
@@ -6,7 +7,7 @@ const FourOFour = () => {
         <div className={styles.main}>
             <img className={styles.rectangle} alt="Image" src="/img/missing-beer.png" />
 
-          <a href="/" className={styles.homeBtn}>Go back to home</a>
+          <Link to="/" className={styles.homeBtn}>Go back to home</Link>
         </div>
   );
 };
