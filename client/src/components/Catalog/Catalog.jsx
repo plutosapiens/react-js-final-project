@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Catalog.module.css"
 import CatalogItem from "./CatalogItem";
 
-import * as catalogService from "../services/catalogService";
+import * as catalogService from "../../services/catalogService";
 
 const Catalog = () => {
     const [items, setCatalog] = useState([]);

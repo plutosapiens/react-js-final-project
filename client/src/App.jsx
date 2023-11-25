@@ -1,14 +1,14 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import Index from "./components/Index"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import FourOFour from "./components/FourOFour"
-import Register from "./components/Register"
-import Login from "./components/Login"
-import AddNew from "./components/AddNew"
-import Edit from "./components/Edit"
-import Catalog from "./components/Catalog"
-import Users from "./components/USers"
+import Index from "./components/Index/Index"
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
+import FourOFour from "./components/FourOFour/FourOFour"
+import Register from "./components/Register/Register"
+import Login from "./components/Login/Login"
+import AddNew from "./components/AddNew/AddNew"
+import Edit from "./components/Edit/Edit"
+import Catalog from "./components/Catalog/Catalog"
+import Users from "./components/Users/Users"
 
 
 
