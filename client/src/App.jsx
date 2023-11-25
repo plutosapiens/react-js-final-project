@@ -1,4 +1,5 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
 import Index from "./components/Index/Index"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
