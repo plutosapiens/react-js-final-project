@@ -1,50 +1,21 @@
-const baseUrl = 'http://localhost:3030/jsonstore/catalog';
+import * as request from "../lib/request";
+
+const baseUrl = 'http://localhost:3030/jsonstore/items';
 
 export const getAll = async () => {
-    const response = await fetch(baseUrl);
-    const result = await response.json();
+    const result = await request.get(baseUrl);
 
-    const data = Object.values(result);
-    console.log(data)
-    return data;
+    return Object.values(result);
 };
 
-export const getOne = async (userId) => {
-    const response = await fetch(`${baseUrl}/${userId}`);
-    const result = await response.json();
+export const getOne = async (itemId) => {
+    const result = await request.get(`${baseUrl}/${itemId}`, );
 
     return result;
-};
+}
 
-export const create = async (data) => {
-    const body = {
-        brand: data.brand,
-        imgUrl: imgUrl,
-        taste: data.taste,
-        strength: data.strength,
-        description: data.description,
-    };
-
-    const response = await fetch(baseUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-    })
-
-    const result = await response.json();
-    console.log(result);
-
-    return result;
-};
-
-export const remove = async (userId) => {
-    const response = await fetch(`${baseUrl}/${userId}`, {
-        method: 'DELETE'
-    });
-
-    const result = await response.json();
+export const create = async (itemData) => {
+    const result = await request.post(baseUrl, itemData);
 
     return result;
 };

@@ -14,21 +14,17 @@ const Catalog = () => {
 
      return (
         <div className={styles.main}>
-        <div className={styles.cheekyText}>
-            They’re fresh
-            <br />
-            They’re excited</div>
-        
-        <div className={styles.catalog}>
-            {items.map(item => (
-               <CatalogItem 
-                key={item._id}
-                userId={item._id}
-                imageUrl={item.imgUrl}
-                brand={item.brand}
-               />
-           ))}
-        </div>
+            <div className={styles.cheekyText}>
+                They’re fresh
+                <br />
+                They’re excited</div>
+
+            <div className={styles.catalog}>
+                {items.map(item => (
+                   <CatalogItem 
+                    key={item._id} {...item} />
+               ))}
+            </div>
         </div>
         
   );
