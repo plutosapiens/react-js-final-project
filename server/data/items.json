@@ -4,20 +4,23 @@
     "taste": "mild",
     "strength": "5/10",
     "description": "Average beer",
-    "imgUrl": "https://images.squarespace-cdn.com/content/v1/62cefc1fcbf3fb7170a6abc4/c0d4d54e-e661-4da6-9f58-dc0104d4c262/00D92FCB-5482-46A6-9906-5D3896A404EC.jpeg"
+    "imgUrl": "https://images.squarespace-cdn.com/content/v1/62cefc1fcbf3fb7170a6abc4/c0d4d54e-e661-4da6-9f58-dc0104d4c262/00D92FCB-5482-46A6-9906-5D3896A404EC.jpeg",
+    "_id": "ade7d716-9eb6-4209-b934-4f93c850f144"
   },
   "bbbb-23be-40a1-9f14-9117b6702a9d": {
-    "brand": "BuzzLight",
+    "brand": "BudLight",
     "taste": "Buzzing",
     "strength": "11/10",
     "description": "Buzzing sound, buzzing taste, buzzing life",
-    "imgUrl": "https://images.squarespace-cdn.com/content/v1/62cefc1fcbf3fb7170a6abc4/c0d4d54e-e661-4da6-9f58-dc0104d4c262/00D92FCB-5482-46A6-9906-5D3896A404EC.jpeg"
+    "imgUrl": "https://www.budlight.com/img/agegate/desktop.png",
+    "_id": "c1f1c53b-7d92-4e27-832f-f3bc6b7be1b7"
   },
   "bbbb-d6df-4e67-bd7e-5f8b03f2fd3f": {
     "brand": "Homemade",
     "taste": "homemade-ish",
     "strength": "6/10",
     "description": "Beer made at home, from scratch",
-    "imgUrl": "https://images.squarespace-cdn.com/content/v1/62cefc1fcbf3fb7170a6abc4/c0d4d54e-e661-4da6-9f58-dc0104d4c262/00D92FCB-5482-46A6-9906-5D3896A404EC.jpeg"
+    "imgUrl": "https://media.wired.com/photos/5f066bb7af3d0a069fd1d63d/master/pass/Gear-Homebrew-630019103.jpg",
+    "_id": "c22839ba-e0da-4340-923c-7f5136a09181"
   }
 }
