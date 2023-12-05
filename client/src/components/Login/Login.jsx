@@ -1,14 +1,36 @@
-import React from "react";
+import useForm from "../../hooks/useForm";
 import styles from "./Login.module.css"
 
 const Login = () => {
+
+  const { values, onChange, onSubmit } = useForm({
+    email: '',
+    password: '',
+  });
+
      return (
         <div className={styles.main}>
         <div className={styles.cheekyText}>Hm... Do we know each other?</div>
 
-        <form method="POST">
-            <input className={styles.inputField} type="text" name="email" id="Login-email" placeholder="email" />
-            <input className={styles.inputField} type="password" name="password" id="Login-password" placeholder="password" />
+        <form id="login" onSubmit={onSubmit}>
+            <input
+            className={styles.inputField}
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email"
+            onChange={onChange}
+            value={values.email}
+            />
+            <input
+            className={styles.inputField}
+            type="password"
+            id="password"
+            name="password"
+            placeholder="password"
+            onChange={onChange}
+            value={values.password}
+            />
             <button className={styles.button} type="submit">Login</button>
         </form>
 
