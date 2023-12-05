@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
+import AuthContext from './contexts/authContext';
 
 import Index from "./components/Index/Index"
 import Header from "./components/Header/Header"
@@ -25,6 +26,8 @@ function App() {
   return (
 
       <>
+      <AuthContext.Provider value={{ loginSubmitHandler }} >
+
       <Header />
 
       <Routes>
@@ -39,6 +42,7 @@ function App() {
       </Routes>
 
       <Footer />
+      </AuthContext.Provider>
       </>
   )
 }
