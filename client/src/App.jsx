@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 import Index from "./components/Index/Index"
 import Header from "./components/Header/Header"
@@ -14,6 +15,13 @@ import Users from "./components/Users/Users"
 
 
 function App() {
+
+  const [auth, setAuth] = useState({});
+
+  const loginSubmitHandler = (values) => {
+    console.log(values)
+  }
+
   return (
 
       <>
@@ -22,7 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login loginSubmitHandler={loginSubmitHandler} />} />
         <Route path="/addnew" element={<AddNew />} />
         <Route path="/edit" element={<Edit />} />
         <Route path="/catalog" element={<Catalog />} />

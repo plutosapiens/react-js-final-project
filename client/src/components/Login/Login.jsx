@@ -1,11 +1,16 @@
 import useForm from "../../hooks/useForm";
 import styles from "./Login.module.css"
 
-const Login = () => {
+const  LoginFormKeys = {
+    Email: 'email',
+    Password: 'password',
+};
 
-  const { values, onChange, onSubmit } = useForm({
-    email: '',
-    password: '',
+const Login = ({loginSubmitHandler}) => {
+
+  const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
+    [LoginFormKeys.Email]: '',
+    [LoginFormKeys.Password]: '',
   });
 
      return (
@@ -17,19 +22,19 @@ const Login = () => {
             className={styles.inputField}
             type="email"
             id="email"
-            name="email"
+            name={LoginFormKeys.Email}
             placeholder="email"
             onChange={onChange}
-            value={values.email}
+            value={values[LoginFormKeys.Email]}
             />
             <input
             className={styles.inputField}
             type="password"
             id="password"
             name="password"
-            placeholder="password"
+            placeholder={LoginFormKeys.Password}
             onChange={onChange}
-            value={values.password}
+            value={values[LoginFormKeys.Password]}
             />
             <button className={styles.button} type="submit">Login</button>
         </form>
