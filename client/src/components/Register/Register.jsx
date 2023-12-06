@@ -6,7 +6,7 @@ import styles from "./Register.module.css";
 
 const RegisterFromKeys = {
   Email: 'email',
-  Name: 'name',
+  Username: 'username',
   Avatar: 'imgUrl',
   Password: 'password',
   RePassword: 'repass',
@@ -16,7 +16,7 @@ const Register = () => {
   const { registerSubmitHandler } = useContext(AuthContext);
   const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
     [RegisterFromKeys.Email]: '',
-    [RegisterFromKeys.Name]: '',
+    [RegisterFromKeys.Username]: '',
     [RegisterFromKeys.Avatar]: '',
     [RegisterFromKeys.Password]: '',
     [RegisterFromKeys.RePassword]: '',
@@ -30,11 +30,11 @@ const Register = () => {
             <input 
               className={styles.inputField} 
               type="text" 
-              id="name" 
-              name={RegisterFromKeys.Name}
-              placeholder="name"
+              id="username" 
+              name={RegisterFromKeys.Username}
+              placeholder="username"
               onChange={onChange}
-              value={values[RegisterFromKeys.Name]}
+              value={values[RegisterFromKeys.Username]}
             />            
             <input
             className={styles.inputField}
