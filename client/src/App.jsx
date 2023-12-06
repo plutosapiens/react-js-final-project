@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer"
 import FourOFour from "./components/FourOFour/FourOFour"
 import Register from "./components/Register/Register"
 import Login from "./components/Login/Login"
+import Logout from './components/Logout/Logout';
 import AddNew from "./components/AddNew/AddNew"
 import Edit from "./components/Edit/Edit"
 import Catalog from "./components/Catalog/Catalog"
@@ -20,13 +21,18 @@ import Users from "./components/Users/Users"
 
 function App() {
   const navigate = useNavigate();
-  const [auth, setAuth] = useState({});
+  const [auth, setAuth] = useState(() => {
+    localStorage.removeItem('accessToken');
+
+    return{};
+  });
 
   const loginSubmitHandler = async (values) => {
     const result = await authService.login(values.email, values.password);
     
     setAuth(result);
 
+    localStorage.setItem('accessToken', result.accessToken);
     navigate(Paths.Home);
   };
 
@@ -40,15 +46,22 @@ function App() {
 
       setAuth(result);
 
+      localStorage.setItem('accessToken', result.accessToken);
       navigate(Paths.Home)
+  }
+
+  const logoutHandler = () => {
+    setAuth({});
+    localStorage.removeItem('accessToken');
   }
 
   const values = {
     loginSubmitHandler,
     registerSubmitHandler,
-    username: auth.username,
+    logoutHandler,
+    username: auth.username || auth.email,
     email: auth.email,
-    isAuthenticated: !!auth.username,
+    isAuthenticated: !!auth.accessToken,
   };
 
   return (
@@ -61,7 +74,8 @@ function App() {
       <Routes>
         <Route path={Paths.Home} element={<Index />} />
         <Route path={Paths.Register} element={<Register />} />
-        <Route path={Paths.Login} element={<Login loginSubmitHandler={loginSubmitHandler} />} />
+        <Route path={Paths.Login} element={<Login />} />
+        <Route path={Paths.Logout} element={<Logout />} />
         <Route path={Paths.AddNew} element={<AddNew />} />
         <Route path={Paths.Edit} element={<Edit />} />
         <Route path={Paths.Catalog} element={<Catalog />} />
