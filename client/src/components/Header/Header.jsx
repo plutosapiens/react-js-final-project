@@ -19,7 +19,7 @@ const Header = () => {
                    //might need to remove
                   <div id="user">
                     <Link to="/users" className={styles.navBtn}>Users</Link>
-                    <Link to="/addnew" className={styles.navBtn}>Add beer</Link>
+                    <Link to="/items/addnew" className={styles.navBtn}>Add beer</Link>
                     <Link to="/logout" className={styles.navBtn}>Logout</Link>
                   </div>
                 )}
