@@ -8,7 +8,6 @@ const Paths = {
     Login: "/login",
     Logout: "/logout",
     Users: "/users",
-    ForOFor: "*",
 };
 
 export default Paths;

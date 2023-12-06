@@ -1,46 +1,76 @@
-import React from "react";
-import styles from "./Register.module.css"
+import { useContext } from "react";
+
+import AuthContext from "../../contexts/authContext";
+import useForm from "../../hooks/useForm";
+import styles from "./Register.module.css";
+
+const RegisterFromKeys = {
+  Email: 'email',
+  Name: 'name',
+  Avatar: 'imgUrl',
+  Password: 'password',
+  RePassword: 'repass',
+};
 
 const Register = () => {
+  const { registerSubmitHandler } = useContext(AuthContext);
+  const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+    [RegisterFromKeys.Email]: '',
+    [RegisterFromKeys.Name]: '',
+    [RegisterFromKeys.Avatar]: '',
+    [RegisterFromKeys.Password]: '',
+    [RegisterFromKeys.RePassword]: '',
+  });
+
      return (
         <div className={styles.main}>
         <div className={styles.cheekyText}>Hi stranger :)</div>
 
-        <form method="POST">
+        <form id="register" onSubmit={onSubmit}>
             <input 
               className={styles.inputField} 
               type="text" 
-              name="name" 
               id="name" 
-              placeholder="name" 
-            />
+              name={RegisterFromKeys.Name}
+              placeholder="name"
+              onChange={onChange}
+              value={values[RegisterFromKeys.Name]}
+            />            
+            <input
+            className={styles.inputField}
+            type="text"
+            id="email"
+            name={RegisterFromKeys.Email}
+            placeholder="email"
+            onChange={onChange}
+            value={values[RegisterFromKeys.Email]}
+          />
             <input 
               className={styles.inputField}
               type="text"
-              name="img"
               id="img"
+              name={RegisterFromKeys.Avatar}
               placeholder="imgUrl"
-            />
-            <input
-              className={styles.inputField}
-              type="text"
-              name="email"
-              id="email"
-              placeholder="email"
+              onChange={onChange}
+              value={values[RegisterFromKeys.Avatar]}
             />
             <input
               className={styles.inputField}
               type="password"
-              name="password"
               id="password"
+              name={RegisterFromKeys.Password}
               placeholder="password"
+              onChange={onChange}
+              value={values[RegisterFromKeys.Password]}
             />
             <input
               className={styles.inputField}
               type="password"
-              name="repeatPassword"
               id="repass"
+              name={RegisterFromKeys.RePassword}
               placeholder="repeat password"
+              onChange={onChange}
+              value={values[RegisterFromKeys.RePassword]}
             />
             <button className={styles.button} type="submit">Register</button>
         </form>

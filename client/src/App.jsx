@@ -30,21 +30,42 @@ function App() {
     navigate(Paths.Home);
   };
 
+  const registerSubmitHandler = async (values) => {
+    const result = await authService.register(
+      values.email,
+      values.password,
+      values.name,
+      values.avatar
+      );
+
+      setAuth(result);
+
+      navigate(Paths.Home)
+  }
+
+  const values = {
+    loginSubmitHandler,
+    registerSubmitHandler,
+    username: auth.username,
+    email: auth.email,
+    isAuthenticated: !!auth.username,
+  };
+
   return (
 
       <>
-      <AuthContext.Provider value={{ loginSubmitHandler }} >
+      <AuthContext.Provider value={values} >
 
       <Header />
 
       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login loginSubmitHandler={loginSubmitHandler} />} />
-        <Route path="/addnew" element={<AddNew />} />
-        <Route path="/edit" element={<Edit />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/users" element={<Users />} />
+        <Route path={Paths.Home} element={<Index />} />
+        <Route path={Paths.Register} element={<Register />} />
+        <Route path={Paths.Login} element={<Login loginSubmitHandler={loginSubmitHandler} />} />
+        <Route path={Paths.AddNew} element={<AddNew />} />
+        <Route path={Paths.Edit} element={<Edit />} />
+        <Route path={Paths.Catalog} element={<Catalog />} />
+        <Route path={Paths.Users} element={<Users />} />
         <Route path="*" element={<FourOFour />} /> {/* Catch-all route for 404 */}
       </Routes>
 
