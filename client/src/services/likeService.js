@@ -1,37 +1,30 @@
-import * as request from '../lib/request';
+import * as request from "../lib/request";
 
 const baseUrl = 'http://localhost:3030/data/likes';
 
-export const likeItem = async (itemId, userId) => {
-    try {
-        const response = await request.post(`${baseUrl}`, {
-            itemId,
-            userId,
-        });
-        return response.data;
-    } catch (error) {
-        console.error('Error liking item:', error);
-        throw new Error('Failed to like item');
-    }
+export const getAll = async () => {
+    const result = await request.get(baseUrl);
+
+    return result;
 };
 
-export const getLikeStatus = async (itemId, userId) => {
+export const getOne = async (likeId) => {
     try {
-        const response = await request.get(`${baseUrl}?itemId=${itemId}&userId=${userId}`);
-        return response.data;
+        const result = await request.get(`${baseUrl}/${likeId}`);
+        return result;
     } catch (error) {
-        console.error('Error fetching like status:', error);
-        throw new Error('Failed to fetch like status');
+        if (error.code === 404) {
+            console.error(`Item with ID ${likeId} not found.`);
+        } else {
+            console.error('Error fetching item:', error);
+        }
+        throw error;
     }
-};
+}
 
-export const getLikesForItem = async (itemId) => {
-    try {
-        const likesResponse = await request.get(`${baseUrl}?itemId=${itemId}`);
-        return likesResponse;
-    } catch (error) {
-        // Handle errors or return an error response
-        console.error('Error fetching likes:', error);
-        return { error: 'Failed to fetch likes' };
-    }
+
+export const create = async (data) => {
+
+    const result = await request.post(baseUrl, data);
+    return result;
 };
