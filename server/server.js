@@ -1341,7 +1341,7 @@
     var seedData = {
     	items: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			_ownerId: "permanent-on-server",
     			name: "Easy Everyday Sweater",
     			imgUrl: "https://isv.prod.lovecrafts.co/v1/images/d795e868cc4a10ae9e7a17284ab7743c/147a735a-b4b0-40b2-a0c7-cf45f249b0c0.jpeg/0/-/832x832",
                 yarnWeight: 'Chunky',
@@ -1350,7 +1350,7 @@
     			_createdOn: 1613551279012
     		},
     		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			_ownerId: "permanent-on-server",
     			name: "Tulip-FairIsle Sweater",
     			imgUrl: "https://isv.prod.lovecrafts.co/v1/images/3f49c70137f717d15448475365ccce59/eb5ee6e6-05ee-446b-afe9-1d23c88e3cdc.jpg/0/-/832x832",
                 yarnWeight: "Aran",
@@ -1359,7 +1359,7 @@
     			_createdOn: 1613551344360
     		},
     		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    			_ownerId: "permanent-on-server",
     			name: "Corlears Cable Sweater",
     			imgUrl: "https://isv.prod.lovecrafts.co/v1/images/20fc87c9be08d1bb4a74c957b2954e04/337ebf33-fc2f-4230-a3b5-a53f1916d4da.jpeg/0/-/832x832",
                 yarnWeight: "Super Chunky",
