@@ -1345,7 +1345,7 @@
     			name: "Easy Everyday Sweater",
     			imgUrl: "https://isv.prod.lovecrafts.co/v1/images/d795e868cc4a10ae9e7a17284ab7743c/147a735a-b4b0-40b2-a0c7-cf45f249b0c0.jpeg/0/-/832x832",
                 yarnWeight: 'Chunky',
-                neeldeSize: '8.00mm',
+                needleSize: '8.00mm',
     			description: 'A classic, simple sweater that you will want to wear every single chilly day! This easy to knit crew neck sweater is knitted flat and seamed and is a great first garment project for beginners - and there are twenty shades to choose from in this fab yarn from Paintbox Yarns!',
     			_createdOn: 1613551279012
     		},
@@ -1354,7 +1354,7 @@
     			name: "Tulip-FairIsle Sweater",
     			imgUrl: "https://isv.prod.lovecrafts.co/v1/images/3f49c70137f717d15448475365ccce59/eb5ee6e6-05ee-446b-afe9-1d23c88e3cdc.jpg/0/-/832x832",
                 yarnWeight: "Aran",
-                neeldeSize: "3.50mm",
+                needleSize: "3.50mm",
     			description: "Tulip-FairIsle Sweater in Novita Nordic Wool - Downloadable PDF is a free Intermediate Knitting pattern by Novita, available as a Downloadable PDF and includes instructions in English. Super fun to make, this pattern could be your next masterpiece!",
     			_createdOn: 1613551344360
     		},
@@ -1363,7 +1363,7 @@
     			name: "Corlears Cable Sweater",
     			imgUrl: "https://isv.prod.lovecrafts.co/v1/images/20fc87c9be08d1bb4a74c957b2954e04/337ebf33-fc2f-4230-a3b5-a53f1916d4da.jpeg/0/-/832x832",
                 yarnWeight: "Super Chunky",
-                neeldeSize: "10.00mm",
+                needleSize: "10.00mm",
     			description: "Corlears Cable Sweater in Lion Brand Wool Ease Thick & Quick - M22089 WETQ - Downloadable PDF is a free Beginner Knitting pattern by Irina Poludnenko & Lion Brand, available as a Downloadable PDF and includes instructions in English. Super fun to make, this pattern could be your next masterpiece!",
     			_createdOn: 1613551388703
     		}
