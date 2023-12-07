@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 const useForm = (submitHandler, initialValues) => {
     const [values, setValues] = useState(initialValues);
 
-    useEffect(() => {
-        setValues(initialValues);
-    }, [])
+    // useEffect(() => {
+    //     setValues(initialValues);
+    // }, []);
+
 
     const onChange = (e) => {
         setValues(state =>({

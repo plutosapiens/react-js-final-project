@@ -2,7 +2,6 @@ import { useEffect, useState, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 
 import Like from './Like/Like';
-import * as likeService from '../../services/likeService';
 import * as catalogService from '../../services/catalogService'
 import styles from "./Details.module.css";
 import AuthContext from "../../contexts/authContext";

@@ -23,6 +23,9 @@ const Edit = () => {
     NeedleSize: 'needleSize',
     Description: 'description',
   };
+
+  const showItem = item;
+
   useEffect(() => {
     catalogService.getOne(itemId)
     .then(result => {
@@ -30,15 +33,20 @@ const Edit = () => {
     });
   }, [itemId]);
 
-  const editItemHandler = async (values) => {
-    try {
-      await catalogService.edit(itemId, values);
+    const editItemHandler = async (e) => {
+        e.preventDefault();
 
-      navigate('/catalog');
-    } catch (err) {
-      console.log(err);
+        const values = Object.fromEntries(new FormData(e.currentTarget));
+
+        try {
+            await catalogService.edit(itemId, values);
+
+            navigate('/catalog');
+        } catch (err) {
+            // Error notification
+            console.log(err);
+        }
     }
-  }
 
   const { values, onChange, onSubmit } = useForm(editItemHandler, item);
 
@@ -52,7 +60,7 @@ const Edit = () => {
               type="text"
               name={EditFormKeys.Name}
               id="name"
-              value={values.Name}
+              value={showItem.name}
               onChange={onChange}
               // placeholder="name"
             />
@@ -61,7 +69,7 @@ const Edit = () => {
               type="text"
               name={EditFormKeys.ImgUrl}
               id="imgUrl"
-              value={values.ImgUrl}
+              value={item.imgUrl}
               onChange={onChange}
               // placeholder="imgUrl"
             />
@@ -70,7 +78,7 @@ const Edit = () => {
               type="text"
               name={EditFormKeys.YarnWeight}
               id="yarnWeighte"
-              value={values.YarnWeight}
+              value={item.yarnWeight}
               onChange={onChange}
               // placeholder="yarn weight"
             />
@@ -79,7 +87,7 @@ const Edit = () => {
               type="text"
               name={EditFormKeys.NeedleSize}
               id="needleSize"
-              value={values.NeedleSize}
+              value={item.needleSize}
               onChange={onChange}
               // placeholder="needle size"
             />
@@ -88,7 +96,7 @@ const Edit = () => {
               type="text"
               name={EditFormKeys.Description}
               id="description"
-              value={values.Description}
+              value={item.description}
               onChange={onChange}
               // placeholder="description"
             />
