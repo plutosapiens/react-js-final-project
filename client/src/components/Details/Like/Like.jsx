@@ -30,18 +30,30 @@ function LikeButton() {
   }, [email, itemId]);
   
   const likeHandler = async () => {
-    if (!liked) {
-      try {
+    try {
+      if (liked) {
+        // If already liked, remove the like
+        const likes = await likeService.getAll();
+        const userLikedItem = likes.find(
+          (like) => like.email === email && like.itemId === itemId
+        );
+
+        if (userLikedItem) {
+          await likeService.remove(userLikedItem._id); // Assuming you have a remove function in your likeService
+          setLiked(false);
+        }
+      } else {
+        // If not liked, like the item
         const data = { itemId, email };
         await likeService.create(data);
         setLiked(true);
         // Perform any additional logic upon successful like
-      } catch (error) {
-        console.error('Error liking item:', error);
-        // Handle error cases
       }
+    } catch (error) {
+      console.error('Error handling like action:', error);
     }
   };
+
   
   return (
     <button

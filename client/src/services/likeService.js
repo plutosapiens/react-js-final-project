@@ -28,3 +28,5 @@ export const create = async (data) => {
     const result = await request.post(baseUrl, data);
     return result;
 };
+
+export const remove = async (likeId) => request.remove(`${baseUrl}/${likeId}`);
