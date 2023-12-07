@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-import Like from './Like/Like';
 
+import Like from './Like/Like';
 import * as likeService from '../../services/likeService';
 import * as catalogService from '../../services/catalogService'
 import styles from "./Details.module.css";
+import AuthContext from "../../contexts/authContext";
 
 
 const Details = () => {
+  const { userId } = useContext(AuthContext);
   const [item, setItem] = useState({});
   const { itemId } = useParams();
   
@@ -22,19 +24,6 @@ const Details = () => {
     }
   }, [itemId]);
 
-  const [liked, setLiked] = useState(false);
-  const likeHandler = async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(e.currentTarget);
-
-    const newLike = await commentService.create(
-        gameId,
-    );
-
-    console.log(newComnewLikeent);
-}
-
   
   return (
     <div className={styles.main}>
@@ -47,12 +36,16 @@ const Details = () => {
         <div>
           <Like />
         </div>
-        {/* <Link to={`/`}  className={styles.button}>
-          Edit
-        </Link>
+        {userId === item._ownerId &&(
+<>
         <Link to={`/`}  className={styles.button}>
+          Edit
+          </Link>
+          <Link to={`/`}  className={styles.button}>
           Delete
-        </Link> */}
+        </Link>
+</>
+        )}
       </div>
     </div>
   );
