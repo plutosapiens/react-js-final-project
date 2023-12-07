@@ -43,7 +43,7 @@ const Details = () => {
         <div className={styles.cheekyText}>Item: {item.name}</div>
         <p className={styles.description}>Description: {item.description}</p>
         <p className={styles.description}>Yarn Weight: {item.yarnWeight}</p>
-        <p className={styles.description}>Needle Size: {item.needleSize}</p>
+        <p className={styles.description}>Needle Size: {item.neeldeSize}</p>
         <div>
           <Like />
         </div>
