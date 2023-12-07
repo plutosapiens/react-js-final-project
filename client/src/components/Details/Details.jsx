@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import * as catalogService from '../../services/catalogService'
 import styles from "./Details.module.css";
@@ -38,12 +38,12 @@ const Details = () => {
         <button onClick={likeItem} className={styles.button}>
           Like
         </button>
-        <button  className={styles.button}>
+        <Link to={`/`}  className={styles.button}>
           Edit
-        </button>
-        <button  className={styles.button}>
+        </Link>
+        <Link to={`/`}  className={styles.button}>
           Delete
-        </button>
+        </Link>
       </div>
     </div>
   );
