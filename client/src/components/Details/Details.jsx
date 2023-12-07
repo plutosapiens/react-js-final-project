@@ -38,6 +38,12 @@ const Details = () => {
         <button onClick={likeItem} className={styles.button}>
           Like
         </button>
+        <button  className={styles.button}>
+          Edit
+        </button>
+        <button  className={styles.button}>
+          Delete
+        </button>
       </div>
     </div>
   );

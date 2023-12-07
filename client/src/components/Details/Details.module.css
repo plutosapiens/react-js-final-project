@@ -38,3 +38,16 @@
   margin-right: 20px; /* Add spacing between image and text */
 }
 
+.button {
+  color: #f4efd2;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e1e1e;
+  background: #fdb326;
+  width: 200px;
+  padding: 10px;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
