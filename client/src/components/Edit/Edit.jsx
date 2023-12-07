@@ -5,16 +5,18 @@ import * as catalogService from '../../services/catalogService';
 import useForm from "../../hooks/useForm";
 import styles from "./Edit.module.css"
 
+let initialState = {
+  Name: '',
+  ImgUrl: '',
+  YarnWeight: '',
+  NeedleSize: '',
+  Description: '',
+};
+
 const Edit = () => {
   const navigate = useNavigate();
   const { itemId } = useParams();
-  const [item, setItem] = useState({
-    Name: '',
-    ImgUrl: '',
-    YarnWeight: '',
-    NeedleSize: '',
-    Description: '',
-  });
+  const [item, setItem] = useState({initialState});
 
   const EditFormKeys = {
     Name: 'name',
@@ -24,31 +26,28 @@ const Edit = () => {
     Description: 'description',
   };
 
-  const showItem = item;
-
   useEffect(() => {
     catalogService.getOne(itemId)
     .then(result => {
       setItem(result);
+    }).catch(error => {
+      // Handle error fetching item
+      console.error('Error fetching item:', error);
     });
   }, [itemId]);
 
-    const editItemHandler = async (e) => {
-        e.preventDefault();
+  const editItemHandler = async (e) => {
+    e.preventDefault();
+      try {
+          await catalogService.edit(itemId, item);  
+          navigate('/catalog');
+      } catch (err) {
+          // Error notification
+          console.log(err);
+      }
+  }
 
-        const values = Object.fromEntries(new FormData(e.currentTarget));
-
-        try {
-            await catalogService.edit(itemId, values);
-
-            navigate('/catalog');
-        } catch (err) {
-            // Error notification
-            console.log(err);
-        }
-    }
-
-  const { values, onChange, onSubmit } = useForm(editItemHandler, item);
+  const { onChange, onSubmit } = useForm(editItemHandler, item);
 
      return (
         <div className={styles.main}>
@@ -60,7 +59,7 @@ const Edit = () => {
               type="text"
               name={EditFormKeys.Name}
               id="name"
-              value={showItem.name}
+              value={item.name}
               onChange={onChange}
               // placeholder="name"
             />
