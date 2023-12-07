@@ -6,6 +6,8 @@ import * as likeService from '../../services/likeService';
 import * as catalogService from '../../services/catalogService'
 import styles from "./Details.module.css";
 import AuthContext from "../../contexts/authContext";
+import { pathToUrl } from '../../utils/pathToUrl';
+import Paths from '../../paths';
 
 
 const Details = () => {
@@ -40,7 +42,7 @@ const Details = () => {
         )}
         {userId === item._ownerId &&(
           <>
-            <Link to={`/`}  className={styles.button}>
+            <Link to={pathToUrl(Paths.Edit, {itemId})}  className={styles.button}>
               Edit
               </Link>
               <Link to={`/`}  className={styles.button}>

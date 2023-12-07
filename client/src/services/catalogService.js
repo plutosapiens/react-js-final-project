@@ -28,3 +28,9 @@ export const create = async (itemData) => {
 
     return result;
 };
+
+export const edit = async (itemId, itemData) => {
+    const result = await request.put(`${baseUrl}/${itemId}`, itemData);
+
+    return result;
+}
