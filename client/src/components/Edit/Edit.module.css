@@ -9,7 +9,7 @@
   
   .cheekyText {
     color: #fdb326;
-    ;font-family: 'Poppins', sans-serif;
+    ;font-family: 'Nunito', sans-serif;
     font-size: 55px;
     font-weight: 700;
     left: 480px;
@@ -22,7 +22,7 @@
   }
 
 .button {
-    color: #f4efd2;font-family: 'Poppins', sans-serif;
+    color: #f4efd2;font-family: 'Nunito', sans-serif;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
@@ -48,7 +48,7 @@
     border: none;
     border-radius: 24px;
     color: #1e1e1e;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 16px;
     font-weight: 600;
     height: 46px;
