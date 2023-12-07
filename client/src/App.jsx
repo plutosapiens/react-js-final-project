@@ -15,6 +15,7 @@ import Logout from './components/Logout/Logout';
 import AddNew from "./components/AddNew/AddNew"
 import Edit from "./components/Edit/Edit"
 import Catalog from "./components/Catalog/Catalog"
+import Details from './components/Details/Details';
 import Users from "./components/Users/Users"
 
 
@@ -77,8 +78,9 @@ function App() {
         <Route path={Paths.Login} element={<Login />} />
         <Route path={Paths.Logout} element={<Logout />} />
         <Route path={Paths.AddNew} element={<AddNew />} />
-        <Route path={Paths.Edit} element={<Edit />} />
         <Route path={Paths.Catalog} element={<Catalog />} />
+        <Route path={Paths.Details} element={<Details />} />
+        <Route path={Paths.Edit} element={<Edit />} />
         <Route path={Paths.Users} element={<Users />} />
         <Route path="*" element={<FourOFour />} /> {/* Catch-all route for 404 */}
       </Routes>

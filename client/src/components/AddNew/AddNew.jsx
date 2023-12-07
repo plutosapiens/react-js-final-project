@@ -4,6 +4,14 @@ import * as catalogService from '../../services/catalogService';
 
 import styles from "./AddNew.module.css"
 
+const AddFormKeys = {
+  Name: 'name',
+  ImgUrl: 'imgUrl',
+  YarnWeight: 'yarnWeight',
+  NeedleSize: 'needleSize',
+  Description: 'description',
+};
+
 const AddNew = () => {
   const navigate = useNavigate();
 
@@ -25,11 +33,41 @@ const AddNew = () => {
           <div className={styles.cheekyText}>New beer on the horizon</div>
 
           <form id="create" onSubmit={createItemSubmitHandler} method="POST">
-            <input className={styles.inputField} type="text" name="brand" id="AddNew-brand" placeholder="brand" />
-            <input className={styles.inputField} type="text" name="imgUrl" id="AddNew-imgUrl" placeholder="imgUrl" />
-            <input className={styles.inputField} type="text" name="taste" id="AddNew-taste" placeholder="taste" />
-            <input className={styles.inputField} type="text" name="strength" id="AddNew-strength" placeholder="strength" />
-            <input className={styles.inputField} type="text" name="description" id="AddNew-description" placeholder="description" />
+            <input 
+              className={styles.inputField}
+              type="text"
+              name={AddFormKeys.Name}
+              id="name"
+              placeholder="name"
+            />
+            <input
+              className={styles.inputField}
+              type="text"
+              name={AddFormKeys.ImgUrl}
+              id="imgUrl"
+              placeholder="imgUrl"
+            />
+            <input
+              className={styles.inputField}
+              type="text"
+              name={AddFormKeys.YarnWeight}
+              id="yarnWeighte"
+              placeholder="yarn weight"
+            />
+            <input
+              className={styles.inputField}
+              type="text"
+              name={AddFormKeys.NeedleSize}
+              id="needleSize"
+              placeholder="needle size"
+            />
+            <input
+              className={styles.inputField}
+              type="text"
+              name={AddFormKeys.Description}
+              id="description"
+              placeholder="description"
+            />
             <button className={styles.button} type="submit">AddNew</button>
           </form>
         </div>
