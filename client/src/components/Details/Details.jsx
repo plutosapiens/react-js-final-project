@@ -1,18 +1,32 @@
-import React from "react";
-import styles from "./Details.module.css"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+import * as catalogService from '../../services/catalogService'
+import styles from "./Details.module.css";
 
 
 const Details = () => {
+  const [item, setItem] = useState({});
+  const { itemId } = useParams();
+  console.log('Item ID:', itemId);
+
+  
+  useEffect(() => {
+    if (itemId) {
+      catalogService.getOne(itemId)
+        .then(setItem)
+        .catch(error => console.error('Error fetching item:', error));
+    } else {
+      console.log('Item ID is undefined.');
+      // Handle the case where itemId is undefined (e.g., show a message or render default content)
+    }
+  }, [itemId]);
+  
+
      return (
         <div className={styles.main}>
-        <div className={styles.cheekyText}>Hm... Do we know each other?</div>
+        <div className={styles.cheekyText}>Item:{item.name}</div>
 
-        <form id="Details">
-
-            <button className={styles.button} type="submit">Details</button>
-        </form>
-
-        <img className={styles.rectangle} alt="Image" src="img/space.png" />
         </div>
         
   );

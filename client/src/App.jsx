@@ -79,7 +79,7 @@ function App() {
         <Route path={Paths.Logout} element={<Logout />} />
         <Route path={Paths.AddNew} element={<AddNew />} />
         <Route path={Paths.Catalog} element={<Catalog />} />
-        <Route path={Paths.Details} element={<Details />} />
+        <Route path="/items/:itemId" element={<Details />} />
         <Route path={Paths.Edit} element={<Edit />} />
         <Route path={Paths.Users} element={<Users />} />
         <Route path="*" element={<FourOFour />} /> {/* Catch-all route for 404 */}
