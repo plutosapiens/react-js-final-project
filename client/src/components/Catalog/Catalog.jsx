@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Catalog.module.css"
-import CatalogItem from "./CatalogItem";
+import CatalogItem from "./CatalogItem/CatalogItem";
 
 import * as catalogService from "../../services/catalogService";
 

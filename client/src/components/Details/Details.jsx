@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import Like from './Like/Like';
 
+import * as likeService from '../../services/likeService';
 import * as catalogService from '../../services/catalogService'
 import styles from "./Details.module.css";
 
@@ -20,12 +22,19 @@ const Details = () => {
     }
   }, [itemId]);
 
-  const likeItem = () => {
-    // Implement logic for like functionality here
-    // For example, update a like count in the database or toggle like status
-    // This function will be called when the like button is clicked
-  };
-  console.log(item)
+  const [liked, setLiked] = useState(false);
+  const likeHandler = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const newLike = await commentService.create(
+        gameId,
+    );
+
+    console.log(newComnewLikeent);
+}
+
   
   return (
     <div className={styles.main}>
@@ -35,15 +44,15 @@ const Details = () => {
         <p className={styles.description}>Description: {item.description}</p>
         <p className={styles.description}>Yarn Weight: {item.yarnWeight}</p>
         <p className={styles.description}>Needle Size: {item.needleSize}</p>
-        <button onClick={likeItem} className={styles.button}>
-          Like
-        </button>
-        <Link to={`/`}  className={styles.button}>
+        <div>
+          <Like />
+        </div>
+        {/* <Link to={`/`}  className={styles.button}>
           Edit
         </Link>
         <Link to={`/`}  className={styles.button}>
           Delete
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
