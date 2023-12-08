@@ -51,7 +51,7 @@ const AddNew = () => {
               className={styles.inputField}
               type="text"
               name={AddFormKeys.YarnWeight}
-              id="yarnWeighte"
+              id="yarnWeight"
               placeholder="yarn weight"
             />
             <input

@@ -1,5 +1,5 @@
 .main {
-    background-color: #0c394e;
+    background-color: #8894A4;
     display: flex;
     flex-direction: column; 
     align-items: left; 
@@ -8,7 +8,7 @@
 }
 
 .cheekyText {
-    color: #fdb326;
+    color: #C2554E;
     ;font-family: 'Nunito', sans-serif;
     font-size: 55px;
     font-weight: 700;

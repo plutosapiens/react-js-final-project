@@ -18,9 +18,12 @@ const Edit = memo(() => {
     setId(localStorage.getItem('ItemId'))
     setName(localStorage.getItem('Name'));
     setImgUrl(localStorage.getItem('ImgUrl'));
-    setYarnWeight(localStorage.getItem('YarnWeight'));
-    setNeedleSize(localStorage.getItem('NeedleSize'));
+    setYarnWeight(localStorage.getItem('Yarn Weight'));
+    setNeedleSize(localStorage.getItem('Needle Size'));
     setDescription(localStorage.getItem('Description'));
+    console.log('Yarn Weight:', localStorage.getItem('Yarn Weight'));
+console.log('Needle Size:', localStorage.getItem('Needle Size'));
+
   }, []);
 
   const editItemSubmitHandler = async (e) => {
