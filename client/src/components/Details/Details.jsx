@@ -25,6 +25,9 @@ const Details = () => {
     }
   }, [itemId]);
 
+  const setData = (data) => {
+    console.log(data);
+  }
   
   return (
     <div className={styles.main}>
@@ -41,7 +44,10 @@ const Details = () => {
         )}
         {userId === item._ownerId &&(
           <>
-            <Link to={pathToUrl(Paths.Edit, {itemId})}  className={styles.button}>
+            <Link
+            to={pathToUrl(Paths.Edit, {itemId})}
+            className={styles.button}
+            onClick={() => setData(item)}>
               Edit
               </Link>
               <Link to={`/`}  className={styles.button}>
