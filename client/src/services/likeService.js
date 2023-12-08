@@ -14,7 +14,6 @@ export const getUserFavourites = async (userId) => {
             where: `_ownerId="${userId}"`
         });
         const result = await request.get(`${baseUrl}?${query}`);
-        console.log(`${baseUrl}?${query}`)
         
         return result;
     }catch (error) {
