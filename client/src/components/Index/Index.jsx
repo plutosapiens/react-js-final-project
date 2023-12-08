@@ -1,7 +1,9 @@
 import React from "react";
-import styles from "./Index.module.css"; 
 
-const Index = () => {
+import styles from "./Index.module.css"; 
+import withAuth from "../../HOC/withAurh";
+
+const Index = ({ _id, accessToken }) => {
   return (
         <div className={styles.main}>
           <div className={styles.cheekyText}>
@@ -21,5 +23,6 @@ const Index = () => {
   );
 };
 
+const EnhancedIndex = withAuth(Index)
 
-export default Index;
+export default EnhancedIndex;
