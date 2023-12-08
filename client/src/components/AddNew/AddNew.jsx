@@ -30,7 +30,7 @@ const AddNew = () => {
   }
      return (
         <div className={styles.main}>
-          <div className={styles.cheekyText}>New beer on the horizon</div>
+          <div className={styles.cheekyText}>Got something 'knitty'?</div>
 
           <form id="create" onSubmit={createItemSubmitHandler} method="POST">
             <input 

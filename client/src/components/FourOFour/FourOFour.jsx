@@ -6,7 +6,7 @@ const FourOFour = () => {
   return (
         <div className={styles.main}>
             {/* <img className={styles.rectangle} alt="Image" src="/img/missing-beer.png" /> */}
-
+            <div className={styles.cheekyText}>Looks like a dropped stitch</div>
           <Link to="/" className={styles.homeBtn}>Go back to home</Link>
         </div>
   );

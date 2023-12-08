@@ -14,8 +14,7 @@ const Index = () => {
             Knit Wit Central
           </div>
           <p className={styles.p}>
-          {isAuthenticated ? `Hello, ${username}!` : 'Friend'}
-            <br />
+          Hi, {isAuthenticated ? ` ${username}!` : 'Friend!'}
             <br />
             Our platform is a cozy corner of the internet where knitting enthusiasts gather to share patterns, showcase handmade creations, exchange tips and tricks, and celebrate the joy of crafting with needles and threads. 
           </p>

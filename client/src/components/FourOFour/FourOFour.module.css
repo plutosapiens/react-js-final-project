@@ -15,7 +15,17 @@
   width: 70%;
   left: 255px;
 }
-
+.cheekyText {
+  color: #C2554E;
+  font-family: 'Nunito', sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+  left: 80px;
+  line-height: normal;
+  opacity: 0.9;
+  position: absolute;
+  width: 535px;
+}
   
 .homeBtn {
   background-color: transparent;

@@ -15,9 +15,9 @@ const Catalog = () => {
      return (
         <div className={styles.main}>
             <div className={styles.cheekyText}>
-                They’re fresh
+            Get Knit-spired!
                 <br />
-                They’re excited</div>
+                Here are the delights...</div>
 
             <div className={styles.catalog}>
                 {items.map(item => (

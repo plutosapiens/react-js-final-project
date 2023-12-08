@@ -41,7 +41,7 @@ const Favourites = () => {
      return (
         <div className={styles.main}>
             <div className={styles.cheekyText}>
-                They’re your favourites</div>
+                We know you love them...</div>
 
             <div className={styles.catalog}>
                 {items.length > 0 ? (

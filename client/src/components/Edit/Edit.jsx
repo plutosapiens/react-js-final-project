@@ -42,7 +42,7 @@ console.log('Needle Size:', localStorage.getItem('Needle Size'));
 
      return (
 <div className={styles.main}>
-          <div className={styles.cheekyText}>New beer on the horizon</div>
+          <div className={styles.cheekyText}>Crafting brilliance awaits</div>
 
           <form id="create" onSubmit={editItemSubmitHandler}>
             <input 
