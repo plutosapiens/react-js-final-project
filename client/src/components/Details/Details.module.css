@@ -1,15 +1,13 @@
-/* Details.module.css */
-
 .main {
   display: flex;
   align-items: flex-start;
-  background-color: #0c394e;
+  background-color: #8894A4;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .cheekyText {
-  color: #fdb326;
+  color: #C2554E;
   font-family: 'Nunito', sans-serif;
   font-size: 55px;
   font-weight: 700;
@@ -20,9 +18,6 @@
 .details {
   flex: 1;
   padding: 20px;
-  background-color: #f4efd2;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .description {
@@ -30,24 +25,39 @@
   font-size: 16px;
   color: #1e1e1e;
 }
+.btnWrapper {
+  display: flex;
+  flex-direction: row; /* Arrange buttons in a column */
+  gap: 10px; /* Space between buttons */
+}
 
 .image {
   width: 50%; /* Adjust the width of the image as needed */
   height: auto;
   border-radius: 8px;
   margin-right: 20px; /* Add spacing between image and text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.button {
-  color: #f4efd2;
+.btnWrapper .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   color: #1e1e1e;
-  background: #fdb326;
+  border: 2px solid #333;
+  /* background: #D6D1CD; */
   width: 200px;
-  padding: 10px;
-  border-radius: 24px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 2px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
+}
+
+.btnWrapper .button:hover {
+  
+  border: none; 
+  background-color: #D6D1CD;
 }

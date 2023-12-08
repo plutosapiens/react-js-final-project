@@ -53,7 +53,7 @@ const Details = () => {
     <div className={styles.main}>
       <img src={item.imgUrl} alt={item.name} className={styles.image} />
       <div className={styles.details}>
-        <div className={styles.cheekyText}>Item: {item.name}</div>
+        <div className={styles.cheekyText}>{item.name}</div>
         <p className={styles.description}>Description: {item.description}</p>
         <p className={styles.description}>Yarn Weight: {item.yarnWeight}</p>
         <p className={styles.description}>Needle Size: {item.needleSize}</p>
@@ -65,7 +65,7 @@ const Details = () => {
               </div>
             )}
             {userId === item._ownerId &&(
-              <>
+              <div className={styles.btnWrapper}>
                 <Link
                 to={pathToUrl(Paths.Edit, {itemId})}
                 className={styles.button}
@@ -78,7 +78,7 @@ const Details = () => {
                   onClick={() => onDelete(item._id)}>
                   Delete
                 </Link>
-              </>
+              </div>
             )}
           </>
         )}
