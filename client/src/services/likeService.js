@@ -10,7 +10,12 @@ export const getAll = async () => {
 
 export const getUserFavourites = async (userId) => {
     try {
-        const result = await request.get(`${baseUrl}?_ownerId=${userId}`);
+        const query = new URLSearchParams({
+            where: `_ownerId="${userId}"`
+        });
+        const result = await request.get(`${baseUrl}?${query}`);
+        console.log(`${baseUrl}?${query}`)
+        
         return result;
     }catch (error) {
         throw(error)
