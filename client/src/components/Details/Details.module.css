@@ -27,7 +27,7 @@
 }
 .btnWrapper {
   display: flex;
-  flex-direction: row; /* Arrange buttons in a column */
+  flex-direction: column; /* Arrange buttons in a column */
   gap: 10px; /* Space between buttons */
 }
 
@@ -40,6 +40,7 @@
 }
 
 .btnWrapper .button {
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,15 +50,23 @@
   font-weight: 600;
   color: #1e1e1e;
   border: 2px solid #333;
-  /* background: #D6D1CD; */
   width: 200px;
   padding: 20px;
-  border-radius: 2px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
-}
+  border: none; 
+  border-radius: 36px;
+  box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba(255, 255, 255, 0.19) inset;
+  }
 
 .btnWrapper .button:hover {
-  
-  border: none; 
-  background-color: #D6D1CD;
+  border-radius: 36px;
+  background: #8894A4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16), 0px 0px 1.4px 1px rgba(255, 255, 255, 0.19);
 }
+
+.button {
+  border: none; 
+  border-radius: 36px;
+  box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba(255, 255, 255, 0.19) inset;
+  }
+  
+  
