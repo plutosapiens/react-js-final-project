@@ -11,7 +11,7 @@ import Paths from '../../paths';
 
 const Details = () => {
   const navigate = useNavigate()
-  const { userId } = useContext(AuthContext);
+  const { userId, isAuthenticated } = useContext(AuthContext);
   const [item, setItem] = useState({});
   const { itemId } = useParams();
   
@@ -57,25 +57,29 @@ const Details = () => {
         <p className={styles.description}>Description: {item.description}</p>
         <p className={styles.description}>Yarn Weight: {item.yarnWeight}</p>
         <p className={styles.description}>Needle Size: {item.needleSize}</p>
-        {userId !== item._ownerId &&(
-          <div>
-            <Like />
-          </div>
-        )}
-        {userId === item._ownerId &&(
+        {isAuthenticated && (
           <>
-            <Link
-            to={pathToUrl(Paths.Edit, {itemId})}
-            className={styles.button}
-            onClick={() => setData(item)}>
-              Edit
-              </Link>
-              <Link
-              to={`/`}
-              className={styles.button}
-              onClick={() => onDelete(item._id)}>
-              Delete
-            </Link>
+            {userId !== item._ownerId &&(
+              <div>
+                <Like />
+              </div>
+            )}
+            {userId === item._ownerId &&(
+              <>
+                <Link
+                to={pathToUrl(Paths.Edit, {itemId})}
+                className={styles.button}
+                onClick={() => setData(item)}>
+                  Edit
+                  </Link>
+                  <Link
+                  to={`/`}
+                  className={styles.button}
+                  onClick={() => onDelete(item._id)}>
+                  Delete
+                </Link>
+              </>
+            )}
           </>
         )}
       </div>
