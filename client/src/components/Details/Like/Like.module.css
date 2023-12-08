@@ -16,7 +16,7 @@
   padding: 20px;
   border: none; 
   border-radius: 36px;
-box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba(255, 255, 255, 0.19) inset;
+box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba(255, 255, 255, 0.8) inset;
 }
 
 .like-button.liked {
@@ -28,14 +28,14 @@ box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba
 
   border: none; 
   background-color: #C2554E;
-  color: #1e1e1e;
+  color: #D6D1CD;
 
 }
 
 .like-button:hover {
   border-radius: 36px;
-  background: #8894A4;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16), 0px 0px 1.4px 1px rgba(255, 255, 255, 0.19);
+  background: #DCDCDC;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16), 0px 0px 1.4px 1px rgba(255, 255, 255, 0.8);
 }
 
 
