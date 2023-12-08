@@ -26,7 +26,12 @@ const Details = () => {
   }, [itemId]);
 
   const setData = (data) => {
-    console.log(data);
+    let { name, imgUrl, yarnWeight, needleSize, description } = data;
+    localStorage.setItem('Name', name);
+    localStorage.setItem('ImgUrl', imgUrl);
+    localStorage.setItem('Yarn Weight', yarnWeight);
+    localStorage.setItem('Needle Size', needleSize);
+    localStorage.setItem('Description', description);
   }
   
   return (
