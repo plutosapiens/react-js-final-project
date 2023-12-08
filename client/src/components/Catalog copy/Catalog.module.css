@@ -1,0 +1,30 @@
+.main {
+    background-color: #0c394e;
+    display: flex;
+    flex-direction: column; 
+    align-items: left; 
+    width: 100%;
+    overflow: auto;
+}
+
+.cheekyText {
+    color: #fdb326;
+    ;font-family: 'Nunito', sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    left: 80px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: normal;
+    padding-left: 80px;
+}
+
+.catalog{
+    display:flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 80px;
+}
+
