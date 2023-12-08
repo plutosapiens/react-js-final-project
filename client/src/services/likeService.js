@@ -8,6 +8,15 @@ export const getAll = async () => {
     return result;
 };
 
+export const getUserFavourites = async (userId) => {
+    try {
+        const result = await request.get(`${baseUrl}?_ownerId=${userId}`);
+        return result;
+    }catch (error) {
+        throw(error)
+    }
+}
+
 export const getOne = async (likeId) => {
     try {
         const result = await request.get(`${baseUrl}/${likeId}`);
