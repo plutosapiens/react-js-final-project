@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 
 import styles from "./Edit.module.css"
+import * as catalogService from '../../services/catalogService';
+import { useNavigate } from "react-router-dom";
 
+const Edit = memo(() => {
+  const navigate = useNavigate();
 
-
-const Edit = () => {
+  const [id, setId] = useState(null);
   const [name, setName] = useState('');
   const [imgUrl, setImgUrl] = useState('');
   const [yarnWeight, setYarnWeight] = useState('');
@@ -12,18 +15,33 @@ const Edit = () => {
   const [description, setDescription] = useState('');
   
   useEffect(() => {
+    setId(localStorage.getItem('ItemId'))
     setName(localStorage.getItem('Name'));
     setImgUrl(localStorage.getItem('ImgUrl'));
     setYarnWeight(localStorage.getItem('YarnWeight'));
     setNeedleSize(localStorage.getItem('NeedleSize'));
     setDescription(localStorage.getItem('Description'));
-  })
+  }, []);
+
+  const editItemSubmitHandler = async (e) => {
+    e.preventDefault();
+
+    const itemData = Object.fromEntries(new FormData(e.currentTarget));
+
+    try{
+      await catalogService.edit(id, itemData);
+
+      navigate(`/items/${id}`);
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
      return (
 <div className={styles.main}>
           <div className={styles.cheekyText}>New beer on the horizon</div>
 
-          <form id="create">
+          <form id="create" onSubmit={editItemSubmitHandler}>
             <input 
               className={styles.inputField}
               type="text"
@@ -74,6 +92,6 @@ const Edit = () => {
         </div>
         
   );
-};
+});
 
 export default Edit;
