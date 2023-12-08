@@ -42,7 +42,7 @@ const Login = () => {
             <button className={styles.button} type="submit">Login</button>
         </form>
 
-        <img className={styles.rectangle} alt="Image" src="img/space.png" />
+        {/* <img className={styles.rectangle} alt="Image" src="img/space.png" /> */}
         </div>
         
   );

@@ -1,40 +1,63 @@
 .main {
-    background-color: #0c394e;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 834px;
-    position: relative;
-  }
-  
-  .cheekyText {
-    color: #fdb326;
-    ;font-family: 'Nunito', sans-serif;
-    font-size: 55px;
-    font-weight: 700;
-    left: 80px;
-    letter-spacing: 0;
-    line-height: normal;
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    width: 535px;
-  }
+  background-color: #8894A4;
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+  height: 834px;
+  position: relative;
+}
+
+.cheekyText {
+  color: #C2554E;
+  font-family: 'Nunito', sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+  left: 480px;
+  letter-spacing: 0;
+  /* line-height: normal; */
+  /* opacity: 0.9; */
+  position: absolute;
+  /* top: 0; */
+  width: 535px;
+}
 
 .button {
-    color: #f4efd2;font-family: 'Nunito', sans-serif;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
+background-color: transparent;
+font-family: 'Nunito', sans-serif;
+text-decoration: none;
+font-size: 16px;
+font-weight: 600;
+color: #1e1e1e;
+width: 200px;
+padding: 20px;
+margin-top: 20px;
+position: relative;
+top: 180px;
+border-radius: 2px;
+}
+
+  .button:hover {
     color: #1e1e1e;
-    background: #fdb326;
-    position: relative;
-    top: 250px;
-    width: 200px;
-    padding: 10px;
-    border-radius: 24px;
-    }
+    border: none; 
+    background-color: #D6D1CD;
+  }
+
+
+.inputField {
+  top: 200px;
+  background-color: #D6D1CD;
+  border: none;
+  border-radius: 2px;
+  color: #1e1e1e;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 46px;
+  position: relative;
+  width: 480px;
+  display: flex;
+  margin-bottom: 20px;
+}
 
 .rectangle {
     justify-content: left;
@@ -42,18 +65,3 @@
     position: relative;
   }
 
-.inputField {
-    top: 200px;
-    background-color: #f4efd2;
-    border: none;
-    border-radius: 24px;
-    color: #1e1e1e;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    height: 46px;
-    position: relative;
-    width: 480px;
-    display: flex;
-    margin-bottom: 20px;
-}

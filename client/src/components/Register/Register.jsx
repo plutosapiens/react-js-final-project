@@ -75,7 +75,7 @@ const Register = () => {
             <button className={styles.button} type="submit">Register</button>
         </form>
 
-        <img className={styles.rectangle} alt="Image" src="img/space.png" />
+        {/* <img className={styles.rectangle} alt="Image" src="img/space.png" /> */}
         </div>
         
   );

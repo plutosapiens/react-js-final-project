@@ -1,5 +1,5 @@
 .main {
-  background-color: #0c394e;
+  background-color: #8894A4;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -18,15 +18,28 @@
 
   
 .homeBtn {
-  color: #f4efd2;font-family: 'Nunito', sans-serif;
+  background-color: transparent;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
   text-decoration: none;
+
+  border: 2px solid #333;
+  padding: 20px;
+  margin-top: 20px;
   color: #1e1e1e;
-  background: #fdb326;
+  width: 200px;
   position: absolute;
   top: 500px;
-  width: 200px;
-  padding: 10px;
+
+
   text-align: center;
-  border-radius: 24px;
+  border-radius: 2px;
   }
 
+
+    
+      .homeBtn:hover {
+        color: #1e1e1e;
+        border: none; 
+        background-color: #D6D1CD;
+      }
