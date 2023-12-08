@@ -19,7 +19,7 @@ const Header = () => {
                   
                   <div className={styles.navbar}>
                     <Link to="/users" className={styles.navBtn}>Users</Link>
-                    <Link to="/items/addnew" className={styles.navBtn}>Add beer</Link>
+                    <Link to="/items/addnew" className={styles.navBtn}>Add project</Link>
                     <Link to="/logout" className={styles.navBtn}>Logout</Link>
                   </div>
                 )}
