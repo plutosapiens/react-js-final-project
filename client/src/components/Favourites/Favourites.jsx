@@ -1,12 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 
-import styles from "./Catalog.module.css"
-import CatalogItem from "./CatalogItem/CatalogItem";
+import styles from "./Favourites.module.css"
+import CatalogItem from "../Catalog/CatalogItem/CatalogItem";
 import * as catalogService from '../../services/catalogService';
 import * as likeService from '../../services/likeService';
-import { AuthContext } from '../../contexts/authContext';
+import AuthContext from '../../contexts/authContext';
 
-const Catalog = () => {
+const Favourites = () => {
     const { userId } = useContext(AuthContext);
 
     const [items, setCatalog] = useState([]);
@@ -36,14 +36,12 @@ const Catalog = () => {
     .catch((error) => {
         console.log(error)
     })
-},[userFavorites]);
+},[userFavs]);
 
      return (
         <div className={styles.main}>
             <div className={styles.cheekyText}>
-                They’re fresh
-                <br />
-                They’re excited</div>
+                They’re your favourites</div>
 
             <div className={styles.catalog}>
                 {items.map(item => (
@@ -56,4 +54,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default Favourites;

@@ -14,7 +14,7 @@ import AddNew from "./components/AddNew/AddNew"
 import Edit from "./components/Edit/Edit"
 import Catalog from "./components/Catalog/Catalog"
 import Details from './components/Details/Details';
-import Users from "./components/Users/Users"
+import Favourites from "./components/Favourites/Favourites"
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
         <Route path={Paths.Catalog} element={<Catalog />} />
         <Route path="/items/:itemId" element={<Details />} />
         <Route path={Paths.Edit} element={<Edit />} />
-        <Route path={Paths.Users} element={<Users />} />
+        <Route path={Paths.Favourites} element={<Favourites />} />
         <Route path="*" element={<FourOFour />} /> {/* Catch-all route for 404 */}
       </Routes>
 

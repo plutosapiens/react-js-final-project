@@ -18,7 +18,7 @@ const Header = () => {
                 {isAuthenticated && (
                   
                   <div className={styles.navbar}>
-                    <Link to="/users" className={styles.navBtn}>Users</Link>
+                    <Link to="/favourites" className={styles.navBtn}>Favourites</Link>
                     <Link to="/items/addnew" className={styles.navBtn}>Add project</Link>
                     <Link to="/logout" className={styles.navBtn}>Logout</Link>
                   </div>
