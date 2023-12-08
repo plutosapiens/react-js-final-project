@@ -34,3 +34,9 @@ export const edit = async (itemId, itemData) => {
 
     return result;
 }
+
+export const delelete = async(itemId) => {
+    const result = await request.remove(`${baseUrl}/${itemId}`);
+
+    return result
+}

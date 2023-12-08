@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 import Like from './Like/Like';
 import * as catalogService from '../../services/catalogService'
@@ -10,6 +10,7 @@ import Paths from '../../paths';
 
 
 const Details = () => {
+  const navigate = useNavigate()
   const { userId } = useContext(AuthContext);
   const [item, setItem] = useState({});
   const { itemId } = useParams();
@@ -34,6 +35,19 @@ const Details = () => {
     localStorage.setItem('Needle Size', needleSize);
     localStorage.setItem('Description', description);
   }
+
+  const getData = () => {
+    catalogService.getAll();
+  }
+  const onDelete = (id) => {
+    catalogService.delelete(id)
+    .then(() => {
+      getData();
+
+      navigate(Paths.Catalog)
+
+    })
+  }
   
   return (
     <div className={styles.main}>
@@ -56,7 +70,10 @@ const Details = () => {
             onClick={() => setData(item)}>
               Edit
               </Link>
-              <Link to={`/`}  className={styles.button}>
+              <Link
+              to={`/`}
+              className={styles.button}
+              onClick={() => onDelete(item._id)}>
               Delete
             </Link>
           </>
