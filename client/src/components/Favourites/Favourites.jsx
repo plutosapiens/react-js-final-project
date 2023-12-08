@@ -44,10 +44,15 @@ const Favourites = () => {
                 They’re your favourites</div>
 
             <div className={styles.catalog}>
-                {items.map(item => (
-                   <CatalogItem 
-                    key={item._id} {...item} />
-               ))}
+                {items.length > 0 ? (
+
+                    items.map(item => (
+                        <CatalogItem 
+                        key={item._id} {...item} />
+                        ))
+                        ): (
+                            <p>No favs :( :)</p>
+                        )}
             </div>
         </div>
         
