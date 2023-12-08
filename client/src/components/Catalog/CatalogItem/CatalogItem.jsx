@@ -10,8 +10,8 @@ const CatalogItem = ({
     return (
         <div className={styles.item}>
         <img className={styles.rectangle} alt={`${name}`} src={imgUrl} />
-        <p className={styles.itemName}>{name}</p>
-        <Link to={`/items/${_id}`} className={styles.button}>Details</Link>
+        {/* <p className={styles.itemName}>{name}</p> */}
+        <Link to={`/items/${_id}`} className={styles.button}>{name}</Link>
     </div>
     );
 };
