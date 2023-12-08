@@ -34,7 +34,13 @@ function App() {
             <Register />
           </GuardedRoute>
         } />
-        <Route path={Paths.Login} element={<Login />} />
+        <Route
+        path={Paths.Login}
+        element={
+          <GuardedRoute>
+            <Login />
+          </GuardedRoute>
+        } />
         <Route path={Paths.Logout} element={<Logout />} />
         <Route path={Paths.AddNew} element={<AddNew />} />
         <Route path={Paths.Catalog} element={<Catalog />} />
