@@ -17,7 +17,7 @@ const Header = () => {
                   <Link to="/catalog" className={styles.navBtn}>Catalog</Link>
                 {isAuthenticated && (
                   
-                  <div className={styles.navbar}>
+                  <div>
                     <Link to="/favourites" className={styles.navBtn}>Favourites</Link>
                     <Link to="/items/addnew" className={styles.navBtn}>Add project</Link>
                     <Link to="/logout" className={styles.navBtn}>Logout</Link>
@@ -25,7 +25,7 @@ const Header = () => {
                 )}
                 
                 {!isAuthenticated && (
-                  <div className={styles.navbar}>
+                  <div>
                     <Link to="/register" className={styles.navBtn}>Register</Link>
                     <Link to="/login" className={styles.navBtn}>Login</Link>
                   </div>

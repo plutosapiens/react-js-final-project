@@ -1,5 +1,5 @@
 .main {
-  background-color: #0c394e;
+  background-color: #8894A4;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -8,7 +8,7 @@
 }
 
 .cheekyText {
-  color: #fdb326;
+  color: #C2554E;
   font-family: 'Nunito', sans-serif;
   font-size: 55px;
   font-weight: 700;
@@ -20,7 +20,7 @@
 }
 
 .p {
-  color: #f4efd2;font-family: 'Nunito', sans-serif;
+  color: #1e1e1e;font-family: 'Nunito', sans-serif;
   font-size: 18px;
   font-weight: 400;
   right: 80px;
@@ -31,6 +31,7 @@
 }
 
 .rectangle {
+  border: 8px solid #506383;
   height: 455px;
   justify-content: center;
   object-fit: cover;

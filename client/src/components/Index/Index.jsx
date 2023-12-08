@@ -3,13 +3,13 @@ import React from "react";
 import styles from "./Index.module.css"; 
 import withAuth from "../../HOC/withAurh";
 
-const Index = ({ _id, accessToken }) => {
+const Index = () => {
   return (
         <div className={styles.main}>
           <div className={styles.cheekyText}>
-            It’sss...
+            Welcoome to
             <br />
-            time for a birichka
+            Knit Wit Central
           </div>
           <p className={styles.p}>
             Lorem ipsum
