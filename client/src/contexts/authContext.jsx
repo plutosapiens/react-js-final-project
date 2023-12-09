@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
         const result = await authService.register(
           values.email,
           values.password,
-          values.name,
+          values.username,
           values.avatar
           );
     

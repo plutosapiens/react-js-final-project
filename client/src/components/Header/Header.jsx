@@ -6,8 +6,7 @@ import styles from './Header.module.css';
 
 const Header = () => {
   const {
-    isAuthenticated,
-    username,
+    isAuthenticated
   } = useContext(AuthContext);
 
     return (

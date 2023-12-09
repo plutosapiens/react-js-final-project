@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3030/jsonstore/users';
+const baseUrl = 'http://localhost:3030/users';
 
 export const getAll = async () => {
     const response = await fetch(baseUrl);
@@ -18,7 +18,7 @@ export const getOne = async (userId) => {
 
 export const create = async (data) => {
     const body = {
-        name: data.name,
+        username: data.username,
         password: data.password,
         imageUrl: data.imageUrl,
     };
