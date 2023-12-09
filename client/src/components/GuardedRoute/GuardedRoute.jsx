@@ -1,17 +1,17 @@
 import { useContext } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import AuthContext from '../../contexts/authContext';
 import Paths from '../../paths';
 
 
-const GuardedRoute = ({ children }) => {
+const GuardedRoute = (props) => {
     const { isAuthenticated } = useContext(AuthContext);
     console.log(isAuthenticated)
     if(!isAuthenticated){
         return <Navigate to={Paths.Login} replace />
     }
     
-    return children;
+    return <Outlet />;
 };
 
 export default GuardedRoute;
