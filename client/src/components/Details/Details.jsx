@@ -49,6 +49,7 @@ const Details = () => {
     })
   }
   
+
   return (
     <div className={styles.main}>
       <img src={item.imgUrl} alt={item.name} className={styles.image} />
