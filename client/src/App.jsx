@@ -27,27 +27,18 @@ function App() {
 
       <Routes>
         <Route path={Paths.Home} element={<Index />} />
-        <Route
-        path={Paths.Register}
-        element={
-          <GuardedRoute>
-            <Register />
-          </GuardedRoute>
-        } />
-        <Route
-        path={Paths.Login}
-        element={
-          <GuardedRoute>
-            <Login />
-          </GuardedRoute>
-        } />
-        <Route path={Paths.Logout} element={<Logout />} />
-        <Route path={Paths.AddNew} element={<AddNew />} />
+        <Route path={Paths.Register} element={<Register />} />
+        <Route  path={Paths.Login}  element={<Login />} />
         <Route path={Paths.Catalog} element={<Catalog />} />
         <Route path="/items/:itemId" element={<Details />} />
-        <Route path={Paths.Edit} element={<Edit />} />
-        <Route path={Paths.Favourites} element={<Favourites />} />
         <Route path="*" element={<FourOFour />} /> {/* Catch-all route for 404 */}
+
+        <Route element={<GuardedRoute />}>
+        <Route path={Paths.Edit} element={<Edit />} />
+        <Route path={Paths.Logout} element={<Logout />} />
+        <Route path={Paths.Favourites} element={<Favourites />} />
+        <Route path={Paths.AddNew} element={<AddNew />} />
+        </Route>
       </Routes>
 
       <Footer />
