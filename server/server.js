@@ -1339,6 +1339,15 @@
     	}
     };
     var seedData = {
+        likes: [
+            {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "itemId": "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+                "email": "peter@abv.bg",
+                "_createdOn": 1702105916724,
+                "_id": "e0aa1f7d-a60f-48cc-9c94-2efaa808c90a"
+            }
+        ],
     	items: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "permanent-on-server",
