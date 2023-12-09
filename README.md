@@ -1,4 +1,4 @@
-## **Knit Wit Central**
+## **Knit Wit Central** :yarn:
 #### **This is a SoftUni project made for the course REACTJS – Oct 2023**
  A cozy corner of the internet where knitters gather to share patterns, showcase handmade creations and exchange knit designs. 
  ## Features
