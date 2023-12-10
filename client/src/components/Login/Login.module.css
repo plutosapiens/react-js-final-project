@@ -72,3 +72,22 @@
     position: relative;
   }
 
+  .errorBox {
+    background-color: #ffe6e6; /* Light red background */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ff9999; /* Red border */
+    border-radius: 5px;
+    height: 50px;
+    /* display: flex;
+    justify-content: left;
+    object-fit:scale-down;
+    position: relative;
+    width: 200px; */
+  }
+  
+  .errorMessage {
+    color: #ff3333; /* Red text color */
+    margin: 5px 0;
+    font-size: 14px;
+  }

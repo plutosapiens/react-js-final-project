@@ -10,15 +10,29 @@ const  LoginFormKeys = {
 };
 
 const Login = () => {
-  const { loginSubmitHandler } = useContext(AuthContext);
+  const { loginSubmitHandler, errorMessages } = useContext(AuthContext);
   const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
     [LoginFormKeys.Email]: '',
     [LoginFormKeys.Password]: '',
   });
 
+  console.log(errorMessages)
      return (
         <div className={styles.main}>
-        <div className={styles.cheekyText}>Hm... Do we know each other?</div>
+
+          {/* If there are no error messages */}
+            {Object.keys(errorMessages).length === 0 && (
+              <div className={styles.cheekyText}>Hm... Do we know each other?</div>
+            )}
+            {/* Display error messages here */}
+            {errorMessages && (
+              <div className={styles.cheekyText}>
+                    {/* Show specific error messages */}
+                    {errorMessages.email && <p>{errorMessages.email}</p>}
+                    {errorMessages.password && <p>{errorMessages.password}</p>}
+                    {/* Add other error messages as needed */}
+                </div>
+            )}           
 
         <form id="login" onSubmit={onSubmit}>
             <input

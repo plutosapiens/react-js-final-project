@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { registerValidation, loginValidation } from '../utils/validation';
 import * as authService from '../services/authService';
@@ -13,14 +13,17 @@ export const AuthProvider = ({ children }) => {
     const navigate = useNavigate();
     const [auth, setAuth] = usePersistedState('auth', {});
     const [errors, setErrors] = useState();
+    
+    const [errorMessages, setErrorMessages] = useState({}); // New state to manage error messages
 
     const loginSubmitHandler = async (values) => {
       try{
-        setErrors({});
+        setErrorMessages({});
         const validationErrors = loginValidation(values);
 
         if(Object.keys(validationErrors).length > 0) {
-          throw validationErrors;
+          setErrorMessages(validationErrors);
+          throw new Error('Login faied!');
         }
 
         const result = await authService.login(values.email, values.password);
@@ -74,6 +77,7 @@ export const AuthProvider = ({ children }) => {
         loginSubmitHandler,
         registerSubmitHandler,
         logoutHandler,
+        errorMessages,
         username: auth.username || auth.email,
         email: auth.email,
         userId: auth._id,
