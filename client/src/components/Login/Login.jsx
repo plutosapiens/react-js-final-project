@@ -19,17 +19,15 @@ const Login = () => {
   console.log(errorMessages)
      return (
         <div className={styles.main}>
-
-          {/* If there are no error messages */}
-            {Object.keys(errorMessages).length === 0 && (
               <div className={styles.cheekyText}>Hm... Do we know each other?</div>
-            )}
+
             {/* Display error messages here */}
             {errorMessages && (
-              <div className={styles.cheekyText}>
+              <div className={styles.errorMessagesContainer}>
                     {/* Show specific error messages */}
-                    {errorMessages.email && <p>{errorMessages.email}</p>}
-                    {errorMessages.password && <p>{errorMessages.password}</p>}
+                    {errorMessages.email && <p className={styles.errorBox}>{errorMessages.email}</p>}
+                    {errorMessages.password && <p className={styles.errorBox}>{errorMessages.password}</p>}
+                    {errorMessages.loginError && <p className={styles.errorBox}>{errorMessages.loginError}</p>}
                     {/* Add other error messages as needed */}
                 </div>
             )}           

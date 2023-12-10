@@ -72,22 +72,34 @@
     position: relative;
   }
 
+  .errorMessagesContainer {
+    display: flex;
+    flex-direction: column;
+    
+
+    position: absolute;
+    top: 10%;
+    right: 10px; /* Adjust the value as needed */
+  }
   .errorBox {
-    background-color: #ffe6e6; /* Light red background */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ff9999; /* Red border */
-    border-radius: 5px;
-    height: 50px;
-    /* display: flex;
-    justify-content: left;
-    object-fit:scale-down;
+    width: 152.59px;
+    height: 69.216px;
+    flex-shrink: 0;
+    border-radius: 36px;
+    background: #B39491;
+    box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba(255, 255, 255, 0.19) inset;
+    
+
     position: relative;
-    width: 200px; */
+    top: 10%;
+    right: 10px; /* Adjust the value as needed */
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e1e1e;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
   }
   
-  .errorMessage {
-    color: #ff3333; /* Red text color */
-    margin: 5px 0;
-    font-size: 14px;
-  }

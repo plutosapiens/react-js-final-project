@@ -34,8 +34,16 @@ export const AuthProvider = ({ children }) => {
         navigate(Paths.Home);
       }catch(error) {
         console.error('Login failed:', error);
-      }
+
+          // Handle error response from the server
+          if (error instanceof Error && error.message) {
+            setErrorMessages({ loginError: error.message });
+          } else {
+            setErrorMessages({ loginError: error.message });
+          }
     }
+  }
+
     
       const registerSubmitHandler = async (values) => {
         try{
@@ -66,6 +74,11 @@ export const AuthProvider = ({ children }) => {
       }
     catch(error) {
       console.error('Register failed:', error);
+      if (error instanceof Error && error.message) {
+        setErrorMessages({ registerError: error.message });
+      } else {
+        setErrorMessages({ registerError: error.message });
+      }
     }
   }
     

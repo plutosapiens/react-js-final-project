@@ -37,6 +37,7 @@ const Register = () => {
                     {errorMessages.imgUrl && <p className={styles.errorBox}>{errorMessages.imgUrl}</p>}
                     {errorMessages.password && <p className={styles.errorBox}>{errorMessages.password}</p>}
                     {errorMessages.repass && <p className={styles.errorBox}>{errorMessages.repass}</p>}
+                    {errorMessages.registerError && <p className={styles.errorBox}>{errorMessages.registerError}</p>}
                     {/* Add other error messages as needed */}
                 </div>
             )}  
