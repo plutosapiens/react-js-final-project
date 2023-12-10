@@ -1,5 +1,4 @@
 export const registerValidation = (values) => {
-    console.log(values)
     let validationErrors = {};
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const imgUrlRegex = /(https?:\/\/.*\.(?:png|jpg))/i

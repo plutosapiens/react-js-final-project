@@ -6,7 +6,6 @@ import Paths from '../../paths';
 
 const GuardedRoute = (props) => {
     const { isAuthenticated } = useContext(AuthContext);
-    console.log(isAuthenticated)
     if(!isAuthenticated){
         return <Navigate to={Paths.Login} replace />
     }

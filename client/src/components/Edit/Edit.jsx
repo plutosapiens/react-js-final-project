@@ -21,8 +21,6 @@ const Edit = memo(() => {
     setYarnWeight(localStorage.getItem('Yarn Weight'));
     setNeedleSize(localStorage.getItem('Needle Size'));
     setDescription(localStorage.getItem('Description'));
-    console.log('Yarn Weight:', localStorage.getItem('Yarn Weight'));
-console.log('Needle Size:', localStorage.getItem('Needle Size'));
 
   }, []);
 

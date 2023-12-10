@@ -6,7 +6,6 @@ import AuthContext from "../../contexts/authContext";
 
 const Index = () => {
   const { isAuthenticated, username } = useContext(AuthContext)
-  console.log(username)
   return (
         <div className={styles.main}>
           <div className={styles.cheekyText}>

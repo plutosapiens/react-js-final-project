@@ -22,7 +22,6 @@ const Register = () => {
     [RegisterFromKeys.RePassword]: '',
   });
 
-  console.log(errorMessages)
      return (
         <div className={styles.main}>
 

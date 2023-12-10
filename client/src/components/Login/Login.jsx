@@ -16,7 +16,6 @@ const Login = () => {
     [LoginFormKeys.Password]: '',
   });
 
-  console.log(errorMessages)
      return (
         <div className={styles.main}>
               <div className={styles.cheekyText}>Hm... Do we know each other?</div>
