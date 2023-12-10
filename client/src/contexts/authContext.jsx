@@ -39,12 +39,12 @@ export const AuthProvider = ({ children }) => {
     
       const registerSubmitHandler = async (values) => {
         try{
-          setErrors({});
+          setErrorMessages({});
           const validationErrors = registerValidation(values);
 
           if(Object.keys(validationErrors).length > 0){
-            throw validationErrors
-            // return setErrors(state => ({...state, validationErrors}));
+          setErrorMessages(validationErrors);
+          throw new Error('Register faied!');
           }
 
         const result = await authService.register(
@@ -60,7 +60,8 @@ export const AuthProvider = ({ children }) => {
           navigate(Paths.Home)
 
           if(!Response.ok) {
-            setErrors(state => ({...state, registerError: Response.message}));
+            setErrorMessages(validationErrors);
+            throw new Error('Register faied!');
           }
       }
     catch(error) {

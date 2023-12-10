@@ -13,7 +13,7 @@ const RegisterFromKeys = {
 };
 
 const Register = () => {
-  const { registerSubmitHandler } = useContext(AuthContext);
+  const { registerSubmitHandler, errorMessages } = useContext(AuthContext);
   const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
     [RegisterFromKeys.Email]: '',
     [RegisterFromKeys.Username]: '',
@@ -22,10 +22,26 @@ const Register = () => {
     [RegisterFromKeys.RePassword]: '',
   });
 
+  console.log(errorMessages)
      return (
         <div className={styles.main}>
-        <div className={styles.cheekyText}>Hi stranger :)</div>
 
+          {/* If there are no error messages */}
+          {Object.keys(errorMessages).length === 0 && (
+        <div className={styles.cheekyText}>Hi stranger :)</div>
+            )}
+            {/* Display error messages here */}
+            {errorMessages && (
+              <div className={styles.cheekyText}>
+                    {/* Show specific error messages */}
+                    {errorMessages.email && <p>{errorMessages.email}</p>}
+                    {errorMessages.username && <p>{errorMessages.username}</p>}
+                    {errorMessages.imgUrl && <p>{errorMessages.imgUrl}</p>}
+                    {errorMessages.password && <p>{errorMessages.password}</p>}
+                    {errorMessages.repass && <p>{errorMessages.repass}</p>}
+                    {/* Add other error messages as needed */}
+                </div>
+            )}  
         <form id="register" onSubmit={onSubmit}>
             <input 
               className={styles.inputField} 
