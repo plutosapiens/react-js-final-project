@@ -3,21 +3,23 @@ REACT JS 2023 Project
 TODO:
 React.js Project Assignment
 
-Your task is to design and implement a web application (Single Page Application) using React.js. Use a service like Kinvey or Firebase for your back-end or create your own with Node.js and MongoDB or a framework in another language (ASP.NET, Spring, Symfony). It can be a discussion forum, blog system, e-commerce site, online gaming site, social network, or any other web application of your choice. 
-
+Your task is to design and implement a web application (Single Page Application) using React.js. Use a service like Kinvey or Firebase for your back-end or create your own with Node.js and MongoDB or a framework in another language (ASP.NET, Spring, Symfony). It can be a discussion forum, blog system, e-commerce site, online gaming site, social network, or any other web application of your choice.
 
 <!-- -------------------------------------------------Application Structure-------------------------------------------------------------- -->
+
 1.1 Public Part
 
-Visible without authentication. 
+Visible without authentication.
+
 - home page
 - user login
 - user registration forms
 - catalog
 - details list
-1.2 Private Part (User Area)
+  1.2 Private Part (User Area)
 
 For registered users, accessible after successful login.
+
 - profile
 - details list(edit)
 - edit page
@@ -30,15 +32,15 @@ General Requirements
 
     <!-- - Catalog – list of all created records -->
 
-    - Details – information about a specific record
+  - Details – information about a specific record
 
 - At least one collection, different from the User collection, with all CRUD operations (create, read, update, delete)
 
-    - Logged in users – create records and request to the REST API, interaction with the records (via Likes, Dislikes, Comments, etc.)
+  - Logged in users – create records and request to the REST API, interaction with the records (via Likes, Dislikes, Comments, etc.)
 
-    - Logged in (author) – to be able to Edit / Delete their records
+  - Logged in (author) – to be able to Edit / Delete their records
 
-    - A Guest should have access to basic website information (catalog, details), but not to the functional activities
+  - A Guest should have access to basic website information (catalog, details), but not to the functional activities
 
 <!-- - Use React.js for the client-side -->
 
@@ -54,7 +56,6 @@ General Requirements
 
 <!-- - It is required to have committed in GitHub for at least 3 days -->
 
-
 Other requirements
 
 - Apply error handling and data validation to avoid crashes when invalid data is entered
@@ -65,8 +66,7 @@ Other requirements
 
 - Demonstrate use of programming concepts - React Hooks, Context API
 
----------------------------------------------------------------------------------------------------------------------------------------------
-
+---
 
 Public Project Defense
 
@@ -77,8 +77,6 @@ Demonstrate how the application works (very shortly)
 Show the source code and explain how it works
 
 Answer questions
-
-
 
 Please be strict in the timing! In the 20th minute, you will be interrupted! It is a good idea to leave the last 5 minutes for questions.
 
@@ -108,7 +106,7 @@ General Requirements – 50 %
 
 Implementing all the general requirements will grant you a place on the defense schedule. All projects that do not have the general requirements will not be accepted for defense.
 
-Other Requirements – 20 % 
+Other Requirements – 20 %
 
 Functionality Presentation – 10 %
 
@@ -130,9 +128,6 @@ Restrictions
 
 You can use parts (some components, routing configurations, form validation, etc...) of the course workshop, but you are NOT allowed to use the whole workshop as your project assignment. You are NOT allowed to use HTML & CSS structures from JS Back-End and JS Applications Courses.
 
-
-
-
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -141,4 +136,3 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-

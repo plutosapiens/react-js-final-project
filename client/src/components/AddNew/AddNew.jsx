@@ -1,15 +1,15 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import * as catalogService from '../../services/catalogService';
+import styles from "./AddNew.module.css";
 
-import styles from "./AddNew.module.css"
+import * as catalogService from "../../services/catalogService";
 
 const AddFormKeys = {
-  Name: 'name',
-  ImgUrl: 'imgUrl',
-  YarnWeight: 'yarnWeight',
-  NeedleSize: 'needleSize',
-  Description: 'description',
+  Name: "name",
+  ImgUrl: "imgUrl",
+  YarnWeight: "yarnWeight",
+  NeedleSize: "needleSize",
+  Description: "description",
 };
 
 const AddNew = () => {
@@ -20,58 +20,60 @@ const AddNew = () => {
 
     const itemData = Object.fromEntries(new FormData(e.currentTarget));
 
-    try{
+    try {
       await catalogService.create(itemData);
 
-      navigate('/catalog');
+      navigate("/catalog");
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
-     return (
-        <div className={styles.main}>
-          <div className={styles.cheekyText}>Got something 'knitty'?</div>
+  };
 
-          <form id="create" onSubmit={createItemSubmitHandler} method="POST">
-            <input 
-              className={styles.inputField}
-              type="text"
-              name={AddFormKeys.Name}
-              id="name"
-              placeholder="name"
-            />
-            <input
-              className={styles.inputField}
-              type="text"
-              name={AddFormKeys.ImgUrl}
-              id="imgUrl"
-              placeholder="imgUrl"
-            />
-            <input
-              className={styles.inputField}
-              type="text"
-              name={AddFormKeys.YarnWeight}
-              id="yarnWeight"
-              placeholder="yarn weight"
-            />
-            <input
-              className={styles.inputField}
-              type="text"
-              name={AddFormKeys.NeedleSize}
-              id="needleSize"
-              placeholder="needle size"
-            />
-            <input
-              className={styles.inputField}
-              type="text"
-              name={AddFormKeys.Description}
-              id="description"
-              placeholder="description"
-            />
-            <button className={styles.button} type="submit">Add New</button>
-          </form>
-        </div>
-        
+  return (
+    <div className={styles.main}>
+      <div className={styles.cheekyText}>Got something 'knitty'?</div>
+
+      <form id="create" onSubmit={createItemSubmitHandler} method="POST">
+        <input
+          className={styles.inputField}
+          type="text"
+          name={AddFormKeys.Name}
+          id="name"
+          placeholder="name"
+        />
+        <input
+          className={styles.inputField}
+          type="text"
+          name={AddFormKeys.ImgUrl}
+          id="imgUrl"
+          placeholder="imgUrl"
+        />
+        <input
+          className={styles.inputField}
+          type="text"
+          name={AddFormKeys.YarnWeight}
+          id="yarnWeight"
+          placeholder="yarn weight"
+        />
+        <input
+          className={styles.inputField}
+          type="text"
+          name={AddFormKeys.NeedleSize}
+          id="needleSize"
+          placeholder="needle size"
+        />
+        <input
+          className={styles.inputField}
+          type="text"
+          name={AddFormKeys.Description}
+          id="description"
+          placeholder="description"
+        />
+        <button className={styles.button} type="submit">
+          Add New
+        </button>
+      </form>
+    </div>
   );
 };
 
