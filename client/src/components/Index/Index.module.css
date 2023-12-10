@@ -1,5 +1,5 @@
 .main {
-  background-color: #DCDCDC;
+  background-color: #dcdcdc;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -8,8 +8,8 @@
 }
 
 .cheekyText {
-  color: #C2554E;
-  font-family: 'Nunito', sans-serif;
+  color: #c2554e;
+  font-family: "Nunito", sans-serif;
   font-size: 55px;
   font-weight: 700;
   left: 80px;
@@ -20,7 +20,8 @@
 }
 
 .p {
-  color: #1e1e1e;font-family: 'Nunito', sans-serif;
+  color: #1e1e1e;
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 400;
   right: 80px;
@@ -39,6 +40,8 @@
   top: 180px;
   width: 1307px;
   border-radius: 35px;
-  border: 8px solid #D6D1CD;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px -6px 4px 0px rgba(255, 255, 255, 0.25);
+  border: 8px solid #d6d1cd;
+  box-shadow:
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px -6px 4px 0px rgba(255, 255, 255, 0.25);
 }

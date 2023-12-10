@@ -1,12 +1,12 @@
-import React, { useContext, useState, useEffect  } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useContext, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-import  AuthContext  from '../../../contexts/authContext';
-import styles from './Like.module.css';
-import * as likeService from '../../../services/likeService'
+import AuthContext from "../../../contexts/authContext";
+import styles from "./Like.module.css";
+import * as likeService from "../../../services/likeService";
 
 function LikeButton() {
-  const { email } = useContext(AuthContext)
+  const { email } = useContext(AuthContext);
   const [liked, setLiked] = useState(false);
   const { itemId } = useParams();
 
@@ -15,27 +15,27 @@ function LikeButton() {
       try {
         const likes = await likeService.getAll(); // Fetch all likes
         const userLikedItem = likes.find(
-          (like) => like.email === email && like.itemId === itemId
+          (like) => like.email === email && like.itemId === itemId,
         );
 
         if (userLikedItem) {
           setLiked(true); // If the user liked this item, set liked state to true
         }
       } catch (error) {
-        console.error('Error checking user liked item:', error);
+        console.error("Error checking user liked item:", error);
       }
     };
 
     checkUserLiked();
   }, [email, itemId]);
-  
+
   const likeHandler = async () => {
     try {
       if (liked) {
         // If already liked, remove the like
         const likes = await likeService.getAll();
         const userLikedItem = likes.find(
-          (like) => like.email === email && like.itemId === itemId
+          (like) => like.email === email && like.itemId === itemId,
         );
 
         if (userLikedItem) {
@@ -50,16 +50,16 @@ function LikeButton() {
         // Perform any additional logic upon successful like
       }
     } catch (error) {
-      console.error('Error handling like action:', error);
+      console.error("Error handling like action:", error);
     }
   };
 
-  
   return (
     <button
-      className={`${styles['like-button']} ${liked ? styles['liked'] : ''}`}
-      onClick={likeHandler}>
-      {liked? "Liked" : "Like"}
+      className={`${styles["like-button"]} ${liked ? styles["liked"] : ""}`}
+      onClick={likeHandler}
+    >
+      {liked ? "Liked" : "Like"}
     </button>
   );
 }

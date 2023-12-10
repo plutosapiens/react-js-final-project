@@ -1,5 +1,5 @@
 .main {
-  background-color: #DCDCDC;
+  background-color: #dcdcdc;
   display: flex;
   justify-content: center;
   /* width: 100%; */
@@ -8,8 +8,8 @@
 }
 
 .cheekyText {
-  color: #C2554E;
-  font-family: 'Nunito', sans-serif;
+  color: #c2554e;
+  font-family: "Nunito", sans-serif;
   font-size: 55px;
   font-weight: 700;
   left: 480px;
@@ -23,7 +23,7 @@
 
 .button {
   background-color: transparent;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
@@ -33,18 +33,20 @@
   margin-top: 20px;
   position: relative;
   top: 180px;
-  border: none; 
+  border: none;
   border-radius: 36px;
-  box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba(255, 255, 255, 0.8) inset;
-  }
-  
-  
-  .button:hover {
-    border-radius: 36px;
-    background: #DCDCDC;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16), 0px 0px 1.4px 1px rgba(255, 255, 255, 0.8);
-  }
+  box-shadow:
+    0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset,
+    0px -1px 1.4px 1px rgba(255, 255, 255, 0.8) inset;
+}
 
+.button:hover {
+  border-radius: 36px;
+  background: #dcdcdc;
+  box-shadow:
+    0px 4px 4px 0px rgba(0, 0, 0, 0.16),
+    0px 0px 1.4px 1px rgba(255, 255, 255, 0.8);
+}
 
 .inputField {
   top: 200px;
@@ -52,54 +54,54 @@
   border: none;
   border-radius: 2px;
   color: #1e1e1e;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 600;
   height: 50px;
   position: relative;
   width: 480px;
   display: flex;
-  margin-bottom: 20px;  
-  border: none; 
+  margin-bottom: 20px;
+  border: none;
   border-radius: 2px;
-  box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba(255, 255, 255, 0.8) inset;
- 
+  box-shadow:
+    0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset,
+    0px -1px 1.4px 1px rgba(255, 255, 255, 0.8) inset;
 }
 
 .rectangle {
-    justify-content: left;
-    object-fit:scale-down;
-    position: relative;
-  }
+  justify-content: left;
+  object-fit: scale-down;
+  position: relative;
+}
 
-  .errorMessagesContainer {
-    display: flex;
-    flex-direction: column;
-    
+.errorMessagesContainer {
+  display: flex;
+  flex-direction: column;
 
-    position: absolute;
-    top: 10%;
-    right: 10px; /* Adjust the value as needed */
-  }
-  .errorBox {
-    width: 152.59px;
-    height: 69.216px;
-    flex-shrink: 0;
-    border-radius: 36px;
-    background: #B39491;
-    box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba(255, 255, 255, 0.19) inset;
-    
+  position: absolute;
+  top: 10%;
+  right: 10px; /* Adjust the value as needed */
+}
+.errorBox {
+  width: 152.59px;
+  height: 69.216px;
+  flex-shrink: 0;
+  border-radius: 36px;
+  background: #b39491;
+  box-shadow:
+    0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset,
+    0px -1px 1.4px 1px rgba(255, 255, 255, 0.19) inset;
 
-    position: relative;
-    top: 10%;
-    right: 10px; /* Adjust the value as needed */
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #1e1e1e;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-  }
-  
+  position: relative;
+  top: 10%;
+  right: 10px; /* Adjust the value as needed */
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1e1e1e;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}

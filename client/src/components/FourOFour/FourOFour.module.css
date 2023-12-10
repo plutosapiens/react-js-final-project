@@ -1,5 +1,5 @@
 .main {
-  background-color: #DCDCDC;
+  background-color: #dcdcdc;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -16,8 +16,8 @@
   left: 255px;
 }
 .cheekyText {
-  color: #C2554E;
-  font-family: 'Nunito', sans-serif;
+  color: #c2554e;
+  font-family: "Nunito", sans-serif;
   font-size: 55px;
   font-weight: 700;
   left: 80px;
@@ -26,10 +26,10 @@
   position: absolute;
   width: 535px;
 }
-  
+
 .homeBtn {
   background-color: transparent;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
   text-decoration: none;
 
@@ -41,15 +41,12 @@
   position: absolute;
   top: 500px;
 
-
   text-align: center;
   border-radius: 2px;
-  }
+}
 
-
-    
-      .homeBtn:hover {
-        color: #1e1e1e;
-        border: none; 
-        background-color: #D6D1CD;
-      }
+.homeBtn:hover {
+  color: #1e1e1e;
+  border: none;
+  background-color: #d6d1cd;
+}
