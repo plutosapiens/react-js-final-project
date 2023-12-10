@@ -71,3 +71,34 @@
     position: relative;
   }
 
+  .errorMessagesContainer {
+    display: flex;
+    flex-direction: column;
+    
+
+    position: absolute;
+    top: 10%;
+    right: 10px; /* Adjust the value as needed */
+  }
+  .errorBox {
+    width: 152.59px;
+    height: 69.216px;
+    flex-shrink: 0;
+    border-radius: 36px;
+    background: #B39491;
+    box-shadow: 0px 4px 1.4px 0px rgba(0, 0, 0, 0.16) inset, 0px -1px 1.4px 1px rgba(255, 255, 255, 0.19) inset;
+    
+
+    position: relative;
+    top: 10%;
+    right: 10px; /* Adjust the value as needed */
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e1e1e;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  

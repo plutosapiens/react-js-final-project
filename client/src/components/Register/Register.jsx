@@ -26,19 +26,17 @@ const Register = () => {
      return (
         <div className={styles.main}>
 
-          {/* If there are no error messages */}
-          {Object.keys(errorMessages).length === 0 && (
         <div className={styles.cheekyText}>Hi stranger :)</div>
-            )}
+
             {/* Display error messages here */}
             {errorMessages && (
-              <div className={styles.cheekyText}>
+              <div className={styles.errorMessagesContainer}>
                     {/* Show specific error messages */}
-                    {errorMessages.email && <p>{errorMessages.email}</p>}
-                    {errorMessages.username && <p>{errorMessages.username}</p>}
-                    {errorMessages.imgUrl && <p>{errorMessages.imgUrl}</p>}
-                    {errorMessages.password && <p>{errorMessages.password}</p>}
-                    {errorMessages.repass && <p>{errorMessages.repass}</p>}
+                    {errorMessages.email && <p className={styles.errorBox}>{errorMessages.email}</p>}
+                    {errorMessages.username && <p className={styles.errorBox}>{errorMessages.username}</p>}
+                    {errorMessages.imgUrl && <p className={styles.errorBox}>{errorMessages.imgUrl}</p>}
+                    {errorMessages.password && <p className={styles.errorBox}>{errorMessages.password}</p>}
+                    {errorMessages.repass && <p className={styles.errorBox}>{errorMessages.repass}</p>}
                     {/* Add other error messages as needed */}
                 </div>
             )}  
