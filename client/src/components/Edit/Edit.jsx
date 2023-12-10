@@ -90,7 +90,7 @@ console.log('Needle Size:', localStorage.getItem('Needle Size'));
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
-            <button className={styles.button} type="submit">AddNew</button>
+            <button className={styles.button} type="submit">Edit</button>
           </form>
         </div>
         

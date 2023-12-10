@@ -68,7 +68,7 @@ const AddNew = () => {
               id="description"
               placeholder="description"
             />
-            <button className={styles.button} type="submit">AddNew</button>
+            <button className={styles.button} type="submit">Add New</button>
           </form>
         </div>
         

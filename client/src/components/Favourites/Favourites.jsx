@@ -40,21 +40,25 @@ const Favourites = () => {
 
      return (
         <div className={styles.main}>
+        {items.length > 0 ? (
+            <>
+                <div className={styles.cheekyText}>
+                    We know you love them...
+                </div>
+                <div className={styles.catalog}>
+                    {items.map(item => (
+                        <CatalogItem
+                            key={item._id} {...item}
+                        />
+                    ))}
+                </div>
+            </>
+        ) : (
             <div className={styles.cheekyText}>
-                We know you love them...</div>
-
-            <div className={styles.catalog}>
-                {items.length > 0 ? (
-
-                    items.map(item => (
-                        <CatalogItem 
-                        key={item._id} {...item} />
-                        ))
-                        ): (
-                            <p>No favs :( :)</p>
-                        )}
+                No favs, how sad...
             </div>
-        </div>
+        )}
+    </div>
         
   );
 };
